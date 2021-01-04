@@ -1,0 +1,28 @@
+Use Case : Requisitar Livro
+Descrição: 
+Cenários: 1 a 3
+Pré-condição: Actor tem que estar autenticado.
+Pós-condição: Requisição do livro fica registada.
+
+Fluxo normal:
+	1. Funcionário indica código de utente e código do livro.
+	2. Sistema valida utente.
+	3. Sistema valida o livro.
+	4. Sistema regista a requisição.
+	5. Sistema imprime comprovativo (c/ data devolução). 
+
+Fluxo alternativo: (utente tem multas) (passo 2)
+	2.1. Sistema informa sobre multas
+	2.2. Funcionário confirma pagamentos.
+	2.3. Sistema atualiza datas das requisições e imprime prova de requisição.
+	2.4. Regressa a 3.
+
+Fluxo de excepção: (código utente inválido) (passo 2)
+	2.1a Sistema informa sobre código inválido.
+	2.2a Sistema recusa requisitar.
+
+Fluxo de excepção: (utente não paga multas) (passo 2.2)
+	2.2.1 Sistema recusa requisição
+
+Fluxo de excepção: (livro não requisitáveis) (passo 3)
+	3.1 Sistema informa sobre livro não requisitável

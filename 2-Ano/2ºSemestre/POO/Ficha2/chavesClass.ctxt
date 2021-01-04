@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=chavesClass
+comment0.text=\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ chaves\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=valores\ key\ size
+comment1.target=boolean\ elem(int[],\ int,\ int)
+comment2.params=a\ b
+comment2.target=boolean\ isEqual(int[],\ int[])
+comment3.params=a\ b
+comment3.target=int[]\ comuns(int[],\ int[])
+comment4.params=chaves\ estrelas
+comment4.target=void\ vitoria(int[],\ int[])
+numComments=5

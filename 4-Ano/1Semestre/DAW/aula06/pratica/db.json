@@ -1,0 +1,34 @@
+{
+  "alunos": [
+    {
+      "nome": "Pixa doçe",
+      "id": "PG12345",
+      "curso": "Literatura Avançada",
+      "git": "https://github.com"
+    },
+    {
+      "nome": "Clara Ribeiro",
+      "id": "A84802",
+      "curso": "Música",
+      "git": "git"
+    },
+    {
+      "nome": "aaaaa",
+      "id": "A84803",
+      "curso": "pixa",
+      "git": "LOL"
+    },
+    {
+      "nome": "AAA",
+      "id": "A84804",
+      "curso": "pxaxasx",
+      "git": "asdsd"
+    },
+    {
+      "nome": "Clara Ribeiro Faria",
+      "id": "A44802",
+      "curso": "Música",
+      "git": "git"
+    }
+  ]
+}

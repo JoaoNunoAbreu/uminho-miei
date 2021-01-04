@@ -1,0 +1,82 @@
+NOTAS:
+
+Aula 1:
+
+- Variáveis de decisão é sempre "quantidade de ..."
+- É possível que seja necessário somar os valores de uma coluna para uma restrição.
+- 2 tabelas --> variáveis de decisão xij
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Resolução gráfica:
+
+- Variáveis não-básicas são aquelas rectas que intersectam a solução ótima, ou seja, no valor da solução ótima terão valor = 0.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Simplex:
+
+- Número de variáveis básicas = número de restrições
+
+- Trocar os sinais dos coeficientes da função Z
+- Escolher a coluna pivot (menor número negativo)
+- Escolher a linha pito (menor razão entre a última coluna e da linha pivot com valor positivo)
+- Só acaba quando todos os elementos da linha Z são maiores ou iguais a 0.
+
+- As variáveis BÁSICAS são aquelas presentes nas LINHAS da coluna simplex.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Simplex com casos particulares:
+
+Domínio ilimitado: Há uma coluna de uma variável não-básica em que os coeficientes
+das restrições são todos ≤ 0.
+Quadro simplex: como identificar uma solução óptima ilimitada? 
+- Há um raio 
+- respectivo coeficiente na linha da função objectivo é < 0.
+
+- Um quadro simplex corresponde a um vértice degenerado se houver uma ou mais variáveis básicas com valor 0.
+
+Método das duas fases : usa-se quando não temos restrições de menor ou igual.
+- Linha da função objetivo fica 1 0 0 ... -1 -1
+- A coluna pivot é o elemento com maior valor em módulo.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Análise matricial
+
+B^-1 = colunas s1,s2,s3 da solução ótima
+cB * B^-1 = linha Z nas colunas s1,s2,s3 da solução ótima
+A = colunas x1,x2,x3 do quadro inicial
+B^-1 * A = colunas x1,x2,x3 da solução ótima
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Dual
+
+1º passo: ver se todas as restrições são de menor ou igual. CC trocar sinais
+2º passo: escolher linha pivot (menor número negativo)
+3º passo: escolher coluna pivot (menor razão em módulo)
+4º passo: verificar se temos valores todos positivos na última coluna. CC voltar ao 1º passo.
+5º passo: verificar se temos valores todos positivos na última linha. Se sim acabou, CC fazer o método simplex normal a partir dessa tabela.
+
+Será que eles são soluções óptimas do problema primal e do problema dual?
+- Sabemos se é a solução ótima se o valor da função objetivo no prima e dual for o mesmo.
+
+Teorema fraco da dualidade
+
+Se x for uma solução válida do problema primal e y for uma solução válida do problema dual 
+então x ≤ y
+
+Teorema da folga complementar
+
+x1.F1 = 0
+x2.F2 = 0
+y1.S1 = 0
+y2.S2 = 0
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Notas importantes:
+
+- Só se mete o simétrico dos coeficientes da função objetivo na tabela se for uma função de maximizar.

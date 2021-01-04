@@ -1,0 +1,35 @@
+Base:													        Extras:
+
+	- shuttle circula entre terminais (com passageiros)					- capacidade limitada (30)
+	- controlador permite aos passageiros							    - pode partir com mínimo de 10, se não houver mais passageiros à espera
+		1. requisitar viagens									        - se houver mais passageiros do que lugares, estes entram por ordem de requisição.
+		2. saber quando pode entrar
+		3. saber quando pode sair
+
+Versão 1:
+
+    - capacidade ilimitada
+    - passageiros entram e saem no terminal certo
+    - shuttle parte quando tiveram saído todos os passageiros que têm como destino esse terminal
+
+Versão 2:
+
+    - Passageiros entram e saem no terminal certo
+    - shuttle com capacidade limitada (30 passageiros)
+    - shuttle parte quando tiveram saído todos os passageiros que têm como destino esse terminal
+    - shuttle parte quando tiver cheio
+
+Versão 3:
+
+    - Passageiros entram e saem no terminal certo
+    - shuttle com capacidade limitada (30 passageiros)
+    - shuttle parte quando tiveram saído todos os passageiros que têm como destino esse terminal
+    - shuttle parte quando (tiver cheio || (10 passageiros && não há passageiros à espera nesse terminal))
+
+Versão 4:
+
+    - Passageiros entram e saem no terminal certo
+    - shuttle com capacidade limitada (30 passageiros)
+    - shuttle parte quando tiveram saído todos os passageiros que têm como destino esse terminal
+    - shuttle parte quando (tiver cheio || (10 passageiros && não há passageiros à espera nesse terminal))
+    - caso haja mais passageiros num terminal do que lugares disponíveis, os passageiros devem entrar por ordem de requisição

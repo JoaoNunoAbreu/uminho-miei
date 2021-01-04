@@ -1,0 +1,38 @@
+-------------------------------------------------------- Chave simétrica: -------------------------------------------------------- 
+
+Ka-b(Ka-b(m)) = m
+
+- Exemplo:
+-- Cifra de substiuição (alfabeto)
+
+- Problemas:
+-- Alice e Bob têm de se encontrar para partilharem a chave entre si para serem capazes de encriptar/desencriptar as mensagens.
+
+--------------------------------------------------------  Chave pública: ------------------------------------------------------------  
+
+Confidencialidade => Integridade
+
+- Cenários:
+
+-- Mensagem cifrada com chave pública do originador:
+	Só será possível decifrar com chave privada do originador, que ninguém terá acesso.
+	Serve para guardar segredos.
+
+-- Mensagem cifrada com chave pública do destinatário:
+	Só destinatário consegue decifrar - Confidencialidade, Integridade.
+
+-- Mensagem cifrada com chave privada do originador:
+	Qualquer um pode decifrar, porque sabem a chave pública do originador.
+	Apenas o originador é capaz de encriptar com a sua chave privada - Autenticação, Não-repúdio, Integridade. (Assinatura Digital)
+
+-- Mensagem cifrada com chave privada do destinatário:
+	Impossível, nunca se sabe as chaves privadas dos outros.
+
+
+
+Assinatura Digital:
+
+Alice recebe uma mensagem do Bob, e quer garantir que:
+	- a mensagem veio do Bob					--> Autenticação
+	- a mensagem não foi alterada				--> Integridade
+	- Bob não pode negar que enviou a mensagem	--> Não repúdio

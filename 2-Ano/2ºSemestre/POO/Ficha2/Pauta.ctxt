@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Pauta
+comment0.text=\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ Pauta\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=notasTurma
+comment1.target=Pauta(int[][])
+comment2.params=uc
+comment2.target=int\ somaUC(int)
+comment3.params=aluno
+comment3.target=float\ mediaAluno(int)
+comment4.params=uc
+comment4.target=float\ mediaUC(int)
+comment5.params=
+comment5.target=int\ maximaNota()
+comment6.params=
+comment6.target=int\ minimaNota()
+comment7.params=x
+comment7.target=int[]\ notasSup(int)
+comment8.params=
+comment8.target=java.lang.String\ stringNotas()
+comment9.params=
+comment9.target=int\ bestUC()
+numComments=10

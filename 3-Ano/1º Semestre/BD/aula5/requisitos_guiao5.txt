@@ -1,0 +1,160 @@
+Dado um médico ter uma especialidade.
+Dado um código postal saber quais são os clientes e médicos.
+Dado uma consulta saber o médico e o cliente.
+
+Requisitos de controlo:
+
+Paciente -> SELECT - view_consulta 
+Médico -> SELECT Paciente
+Recepcionista -> SELECT, CREATE, UPDATE -- Consulta -- Pacientes
+DBA - Admin -- FULL ACESS
+
+Nota:
+
+A data_hora das consultas é uma PK porque se não fosse poderíamos marcar 2 consultas à mesma hora.
+
+
+------------------------------------------------------------------------------------------------------------------------------  
+
+ALGEBRA RELACIONAL
+
+
+
+A	B		        B
+A	C           :         C       =            A
+B	B
+
+
+π a (σ a > 20 R) 
+SELECT A WHERE A > 20 FROM R
+
+
+- Produto cartesiano
+
+	A	B	C
+R =  1	2	3
+	D	E	F
+	4	5	6
+
+S = 	J
+      	K
+
+		A 	B	C	J
+  		A	B	C	K
+		1	2	3	J
+R x S =	1 	2	3	K				4 x 2 = 8 resultados
+		D	E	F	J
+		D	E	F	K
+		4	5	6	J	
+		4	5	6	K
+
+- Junção natural ⋈
+
+	A	B	C
+R =  1	2	3
+	D	E	F
+	4	5	6
+
+	A	1	3
+S =  	A	2 	3	
+	D	9	10
+
+			A	B	C	A	1	3
+R ⋈ S = 		A 	B	C	A	2	3
+Rc1 = Sc1	D	E	F	D	9	10
+
+
+
+------------------------------------------------------------------------------------------------------------------------------  
+
+Resolução exercício 3
+
+
+(a) 
+	π nome
+	      |
+	σ calc(anos_serviço) > 10
+	      |
+	Médicos
+
+
+(b)
+	
+	π nome,designação
+		 |
+		⋈
+	      /	    \
+ Médicos	    Especialidade
+
+
+(c)
+
+	π nome, morada
+		|
+	       ⋈
+	      /    \
+Pacientes	   σ localidade = 'Braga'
+				|
+			Código Postal
+
+(d)
+	π nome
+		|
+	       ⋈
+	     /	   \
+Médicos	   σ designação = 'Oftalmologia'
+					|
+				Especialidade
+
+(e)
+	π nome,idade
+		|
+	σ calc(data_serviço) > 40
+		|
+	       ⋈
+	     /	   \
+Médicos	   σ designação = 'Clínica Geral'
+					|
+				Especialidade
+
+(f)
+						π médicos, nome
+							 |
+							⋈							
+			      /								\
+			    /								  \
+			  /								    ⋈
+			/							    /			\
+	       ⋈								  /			   ⋈
+	     /	   \								/       		/	\
+Médicos	   σ designação = 'Oftalmologia'	Consultas   Paciente     σ localidade = 'Braga'
+					|										|
+				Especialidade								Código Postal
+	
+	
+
+(g)
+						π nome, ano de serviço
+							|
+						       ⋈
+				 /					    \
+			       /						⋈
+			     /					     /			     \
+	σ idade < 20			σ idade < 50				σ calc(data_hora) = 'Tarde'
+	  	|					|						|
+	Paciente				Médicos					Consultas
+
+
+(h)											π nome, idade 
+											 |		
+											⋈
+										/			\
+										-			σ idade < 10
+									/	     \				|
+								Consultas	⋈		Pacientes
+										     /	      \
+									Consultas	     ⋈
+											      /			\
+											Médicos	σ especialidade = 'Oftalmologia'
+														|
+													Especialidade

@@ -1,0 +1,129 @@
+1 Client threads
+
+throughput (txn/s) = 526.8
+response time (s) = 0.0018968886809035688
+abort rate (%) = 67.14123006833712
+
+throughput (txn/s) = 482.5
+response time (s) = 0.0020721441392746115
+abort rate (%) = 66.05181347150258
+
+throughput (txn/s) = 528.7
+response time (s) = 0.0018905407770001892
+abort rate (%) = 65.78399848685454
+
+throughput (txn/s) = 494.6
+response time (s) = 0.0020203615036393043
+abort rate (%) = 66.94298422968055
+
+----------------------
+
+2 Client threads
+
+throughput (txn/s) = 744.4
+response time (s) = 0.0026852292729715207
+abort rate (%) = 66.41590542718968
+
+throughput (txn/s) = 794.2
+response time (s) = 0.002516681902795266
+abort rate (%) = 67.16192394862755
+
+throughput (txn/s) = 819.3
+response time (s) = 0.002438951121323081
+abort rate (%) = 65.99536189430002
+
+throughput (txn/s) = 810.8
+response time (s) = 0.002465968488899852
+abort rate (%) = 66.77355698075975
+
+throughput (txn/s) = 770.9
+response time (s) = 0.0025931165986509274
+abort rate (%) = 66.74017382280451
+
+---------------------------
+
+4 Client threads
+
+throughput (txn/s) = 1052.7
+response time (s) = 0.0037963637950983184
+abort rate (%) = 66.39118457300276
+
+
+throughput (txn/s) = 1087.5
+response time (s) = 0.0036771267780229887
+abort rate (%) = 66.58390804597701
+
+throughput (txn/s) = 956.1
+response time (s) = 0.004182244356238887
+abort rate (%) = 66.18554544503714
+
+throughput (txn/s) = 805.1
+response time (s) = 0.004967615452862999
+abort rate (%) = 66.11601043348652
+
+-------------------------------------------------
+
+8 Client threads
+
+throughput (txn/s) = 1106.1
+response time (s) = 0.007233885180634662
+abort rate (%) = 67.17295000452039
+
+throughput (txn/s) = 1080.1
+response time (s) = 0.007391928680492547
+abort rate (%) = 66.68826960466623
+
+throughput (txn/s) = 986.8
+response time (s) = 0.008099807747567897
+abort rate (%) = 66.56870693149574
+
+throughput (txn/s) = 964.0
+response time (s) = 0.008291738758713692
+abort rate (%) = 66.43153526970954
+
+--------------------------------------------------------
+
+16 Client threads
+
+throughput (txn/s) = 1123.3
+response time (s) = 0.015174743716282382
+abort rate (%) = 66.28683343719398
+
+throughput (txn/s) = 1047.9
+response time (s) = 0.015246874567325127
+abort rate (%) = 66.3517511212902
+
+throughput (txn/s) = 1074.9
+response time (s) = 0.014875528777002512
+abort rate (%) = 67.14112940738673
+
+throughput (txn/s) = 1163.1
+response time (s) = 0.01376064401375634
+abort rate (%) = 67.24271343822544
+
+----------------------------------------------------------------------------------------------------------------------
+
+shared_buffers = 128kB
+
+1 Client threads
+
+throughput (txn/s) = 249.2
+response time (s) = 0.004010256242375602
+abort rate (%) = 66.77367576243981
+
+--------------------------------------------------------
+
+2 Client threads
+
+--------------------------------------------------------
+
+4 Client threads
+
+--------------------------------------------------------
+
+8 Client threads
+
+--------------------------------------------------------
+
+16 Client threads
+	

@@ -1,0 +1,3 @@
+MQ - S = 0 -> pol interpolador
+Métodos gradiente quasi newton = dimensao quadrático converge num máximo em n iterações (n = nº de vars)
+Se o SN der 1 iteracao -> o problema é quadrático ??????

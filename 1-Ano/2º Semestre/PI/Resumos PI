@@ -1,0 +1,17 @@
+---> Fórmula para eliminação de elementos de um array
+
+- int i,j = 0;
+
+- NÃO STRING : for (i = 0; i < N; i++) 
+      STRING : for (i = 0; s[i] != '\0'; i++)
+
+- if com a condição contrária à pedida no enunciado (tudo mesmo, incluindo sinais lógicos)
+
+- colocar neste s[j++] = s[i];
+
+- STRING s[j] = '\0'
+
+
+---> Quando for uma alteração de string colocar no fim sempre s[i] = '\0';
+
+---> Quando for preciso usar o último elemento de uma string fazer s[tam-1];

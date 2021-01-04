@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=MeusPontos
+comment0.text=\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ MeusPontos\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=
+comment1.target=MeusPontos()
+comment1.text=\n\ COnstrutor\ para\ objetos\ da\ classe\ MeusPontos\n
+comment2.params=p
+comment2.target=void\ adicionaPonto(Ponto)
+comment3.params=
+comment3.target=int\ soma()
+comment3.text=\n\ Calcula\ a\ soma\ das\ coordenadas\ x.\n
+numComments=4

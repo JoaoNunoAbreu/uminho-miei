@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Lampada
+comment0.text=\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ Lampada\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=
+comment1.target=Lampada()
+comment2.params=
+comment2.target=void\ lampON()
+comment3.params=
+comment3.target=void\ lampOFF()
+comment4.params=
+comment4.target=void\ lampECO()
+numComments=5

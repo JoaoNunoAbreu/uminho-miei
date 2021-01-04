@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=CarroEletrico
+comment1.params=
+comment1.target=CarroEletrico()
+comment10.params=
+comment10.target=java.lang.String\ toCSV()
+comment2.params=marca\ matr\ nif\ velocidadeMediaKm\ precoKm\ consumoPorKm\ posicao\ classificacao\ disponibilidade\ al\ autonomiaEletro
+comment2.target=CarroEletrico(java.lang.String,\ java.lang.String,\ int,\ double,\ double,\ double,\ java.awt.geom.Point2D.Double,\ int,\ boolean,\ java.util.List,\ int)
+comment3.params=c
+comment3.target=CarroEletrico(CarroEletrico)
+comment4.params=autonomia
+comment4.target=void\ setAutonomia(double)
+comment5.params=
+comment5.target=double\ getAutonomia()
+comment6.params=
+comment6.target=double\ getAutonomia_init()
+comment7.params=o
+comment7.target=boolean\ equals(java.lang.Object)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment9.params=
+comment9.target=CarroEletrico\ clone()
+numComments=11

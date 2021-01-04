@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE poema SYSTEM "file:/Users/joaonunoabreu/Desktop/1Semestre/DAW/aula02/poema.dtd">
+<poema>
+    <titulo>"Soneto Já Antigo"</titulo>
+    <autor>(Álvaro de Campos)</autor>
+    <corpo>
+        <quadra>
+            <verso>Olha, Daisy, quando eu morrer tu hás-de</verso>
+            <verso>Dizer aos meus amigos ai de Londres,</verso>
+            <verso>Que embora não o sintas, tu escondes</verso>
+            <verso>A grande dor da minha morte. Irás de</verso>
+        </quadra>
+        <quadra>
+            <verso>p’ra York, onde nasceste (dizes</verso>
+            <verso>Que eu nada que tu digas acredito...)</verso>
+            <verso>Contar àquele pobre rapazito</verso>
+            <verso>Que me deu tantas horas tão felizes</verso>
+        </quadra>
+        <terceto>
+            <verso>(Embora não o saibas) que morri.</verso>
+            <verso>Mesmo ele, a quem eu tanto julguei amar,</verso>
+            <verso>Nada se importará. Depois vai dar</verso>
+        </terceto>
+        <terceto>
+            <verso>A notícia a essa estranha Cecily</verso>
+            <verso>Que acreditava que eu seria grande...</verso>
+            <verso> Raios partam a vida e quem lá ande!...</verso>
+        </terceto>
+    </corpo>
+    <data> (1922)</data>
+</poema>

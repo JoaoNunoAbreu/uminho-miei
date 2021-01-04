@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=GestaoFB
+comment0.text=\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ GestaoFB\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=
+comment1.target=GestaoFB()
+comment2.params=map
+comment2.target=GestaoFB(java.util.Map)
+comment2.text=public\ GestaoFB(GestaoFB\ outro){\n\ \ \ \ \ \ \ \ setMap(outro);\n}
+comment3.params=user\ post
+comment3.target=void\ addPost(java.lang.String,\ FBPost)
+numComments=4

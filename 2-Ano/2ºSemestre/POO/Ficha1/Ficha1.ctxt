@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Ficha1
+comment0.text=\n\ Exerc\u00EDcios\ resolvidos\ da\ ficha\ 1\ de\ POO.\n\ \n\ @author\ (Jo\u00E3o\ Nuno\ Abreu)\ \n\ @version\ (12/02)\n
+comment1.params=graus
+comment1.target=double\ celsiusParaFarenheit(double)
+comment2.params=a\ b
+comment2.target=int\ maximoNumeros(int,\ int)
+comment3.params=nome\ saldo
+comment3.target=java.lang.String\ criaDescricaoConta(java.lang.String,\ double)
+comment4.params=valor\ taxaConversao
+comment4.target=double\ eurosParaLibras(double,\ double)
+comment5.params=a\ b
+comment5.target=double\ ordemMedia(int,\ int)
+comment6.params=num
+comment6.target=long\ factorial(int)
+comment7.params=a\ b
+comment7.target=long\ tempoGasto(long,\ long)
+numComments=8

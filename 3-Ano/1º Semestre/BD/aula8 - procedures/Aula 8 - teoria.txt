@@ -1,0 +1,62 @@
+Aula 8 - teoria
+
+------------------------------------------------------------------------------------
+
+- Triggers => despoleta ação noutra tabela
+
+Action Event ON TableX
+
+Before - old
+
+After - old
+      - new 
+
+- ACID
+
+A - Atomicidade 
+C - Consistência
+I - Isolamento
+D - Durabilidades
+
+A - Exemplo: Em uma transferência de valores entre contas bancárias, é necessário que, da conta origem seja retirado um valor X e na conta destino seja somado o mesmo valor X. As duas operações devem ser completadas sem que qualquer erro aconteça. Em caso de algum erro, todas as alterações feitas nessa operação de transferência devem ser desfeitas.
+
+C - Exemplo: Considere um banco de dados que guarde informações de clientes e que use o CPF como chave primária. Então, qualquer inserção ou alteração no banco não pode duplicar um CPF (unicidade de chaves) ou colocar um valor de CPF inválido, como o valor 000.000.000-00 (restrição de integridade lógica).
+
+------------------------------------------------------------------------------------
+
+- Procedure
+
+DELIMETER$$
+CREATE PROCEDURE _____ (IN a INT, OUT b INT, INOUT VARCHAR(10))
+    BEGIN
+        DECLARE _____ INT DEFAULT 0;
+        x
+        x
+        x
+    END$$
+
+------------------------------------------------------------------------------------
+
+- Function
+
+CREATE FUNCTION(a INT) RETURNS BOOL
+(NOT) DETERMINISTIC
+    BEGIN
+        x
+        x
+        x
+        x
+        x
+    END
+    DELIMETER;
+
+------------------------------------------------------------------------------------
+
+- Trigger
+
+DELIMETER$$
+CREATE Trigger _________
+AFTER INSERT ON __________
+FOR EACH ROW 
+    BEGIN
+    END$$

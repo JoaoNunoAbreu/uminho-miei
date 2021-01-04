@@ -1,0 +1,4 @@
+- O período de recuperação do investimento ou, em inglês, payback, é o tempo decorrido entre o investimento inicial e o momento no qual o lucro acumulado é igualado ao valor desse investimento.
+- Como podemos ver na fórmula do payback, o valor deste é inicialmente superior a 1 pois o investimento inicial é superior ao ganho no período mas há medida que o tempo passa o valor do payback vai diminuindo e cada vez aproxima-se mais de 1 atingindo, deste modo, o ponto de equilíbrio pretendido. 
+- As vantagens do payback é que é uma forma fácil e intuitiva de avaliar o projeto, conseguimos também saber quando começamos a ganhar lucro e fornece uma ideia de risco do projeto.
+- No entanto tem algumas desvantagens pois trabalha com prazos mais curtos e não tem em conta as entradas depois do ano de recuperação, tornando-se desaconselhável na avaliação de projetos de longa duração.

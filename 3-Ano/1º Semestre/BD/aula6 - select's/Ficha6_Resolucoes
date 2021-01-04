@@ -1,0 +1,70 @@
+#2.a
+SELECT nome FROM MEDICO WHERE idade(data_inicio_servico) > 10;
+ 
+#2.b
+SELECT nome, designacao FROM MEDICO m, ESPECIALIDADE e WHERE m.especialidade = e.id_especialidade;
+ 
+#2.c
+SELECT nome, morada FROM PACIENTE p, CODIGO_POSTAL cp WHERE cp.codigo_postal = p.codigo_postal AND cp.localidade = 'Braga';
+ 
+#2.d
+SELECT nome FROM MEDICO m, ESPECIALIDADE e WHERE m.especialidade = e.id_especialidade AND e.designacao = 'Oftalmologia';
+ 
+#2.e
+SELECT nome, idade(data_nascimento) FROM MEDICO m, ESPECIALIDADE e WHERE m.especialidade = e.id_especialidade
+AND e.designacao = 'Clinica Geral'
+AND idade(m.data_inicio_servico) > 40;
+ 
+#2.f
+SELECT DISTINCT m.nome FROM MEDICO m, CONSULTA c WHERE m.id_medico = c.id_medico AND c.id_medico IN (
+SELECT id_medico FROM MEDICO m, ESPECIALIDADE e WHERE m.especialidade = e.id_especialidade AND e.designacao = 'Oftalmologia')
+AND c.id_paciente IN (
+SELECT id_paciente FROM PACIENTE p, CODIGO_POSTAL cp WHERE cp.codigo_postal = p.codigo_postal AND cp.localidade = 'Braga');
+ 
+#2.g
+SELECT DISTINCT m.nome, idade(m.data_inicio_servico) FROM CONSULTA c, MEDICO m, PACIENTE p WHERE c.id_medico= m.id_medico AND c.id_paciente = p.id_paciente AND c.id_medico IN (
+SELECT id_medico FROM MEDICO WHERE idade(data_nascimento) > 50) AND c.id_paciente IN (
+SELECT id_paciente FROM PACIENTE WHERE idade(data_nascimento) < 20)
+AND HOUR(data_hora) > 13;
+ 
+ 
+#2.h
+SELECT DISTINCT p.nome, idade(p.data_nascimento) FROM MEDICO m,CONSULTA c,PACIENTE p, ESPECIALIDADE e WHERE c.id_paciente = p.id_paciente AND m.id_medico = c.id_medico AND e.id_especialidade = m.especialidade AND idade(p.data_nascimento) > 10 AND c.id_paciente NOT IN (
+SELECT p.id_paciente FROM MEDICO m,CONSULTA c,PACIENTE p, ESPECIALIDADE e WHERE c.id_paciente = p.id_paciente AND m.id_medico = c.id_medico AND e.id_especialidade = m.especialidade AND e.designacao = 'Oftalmologia');
+ 
+#2.i
+SELECT DISTINCT e.designacao FROM CONSULTA c, MEDICO m, ESPECIALIDADE e WHERE e.id_especialidade = m.especialidade AND c.id_medico = m.id_medico
+AND MONTH(data_hora)  = 1 AND YEAR(data_hora) = 2016;
+ 
+#2.j
+SELECT nome FROM MEDICO WHERE idade(data_nascimento) > 30 OR idade(data_inicio_servico) < 5;
+ 
+#2.k
+SELECT DISTINCT m.id_medico nome, idade(data_nascimento) FROM MEDICO m, ESPECIALIDADE e, CONSULTA c WHERE m.especialidade = e.id_especialidade
+AND e.designacao = 'Clinica Geral' AND c.id_medico = m.id_medico AND c.id_medico NOT IN (
+SELECT c.id_medico FROM CONSULTA c WHERE MONTH(data_hora)  = 1 AND YEAR(data_hora) = 2016);
+ 
+#2.l
+SELECT DISTINCT x.id_paciente FROM CONSULTA AS x
+WHERE NOT EXISTS (SELECT * FROM MEDICO AS y
+WHERE NOT EXISTS (SELECT * FROM CONSULTA AS z
+WHERE (z.id_paciente=x.id_paciente) AND (z.id_medico=y.id_medico)));
+ 
+SELECT id_paciente FROM CONSULTA WHERE id_medico IN (SELECT id_medico FROM MEDICO)
+GROUP BY id_paciente HAVING COUNT(*) = (SELECT COUNT(*) FROM MEDICO);
+ 
+#2.m
+SELECT DISTINCT e.designacao FROM CONSULTA c INNER JOIN MEDICO m ON m.id_medico = c.id_medico INNER JOIN ESPECIALIDADE e ON e.id_especialidade = m.especialidade WHERE MONTH(data_hora)  = 1 OR MONTH(data_hora)= 3 AND YEAR(data_hora) = 2016;
+ 
+#2.n
+SELECT DISTINCT m.nome FROM CONSULTA c, MEDICO m WHERE c.id_medico = m.id_medico AND c.id_paciente NOT IN (
+SELECT p.id_paciente FROM PACIENTE p, CODIGO_POSTAL cp, CONSULTA c WHERE c.id_paciente = p.id_paciente AND cp.codigo_postal = p.codigo_postal AND cp.localidade = 'Braga');
+ 
+#2.o
+SELECT DISTINCT p.id_paciente, p.nome FROM PACIENTE p, CONSULTA c WHERE p.id_paciente = c.id_paciente
+AND c.id_paciente NOT IN (
+SELECT p.id_paciente FROM PACIENTE p, CONSULTA c, MEDICO m, ESPECIALIDADE e WHERE p.id_paciente = c.id_paciente
+AND m.especialidade = e.id_especialidade AND m.id_medico = c.id_medico
+AND c.id_medico NOT IN (
+SELECT id_medico FROM MEDICO m, ESPECIALIDADE e WHERE m.especialidade = e.id_especialidade
+AND e.designacao = 'Clinica Geral'));

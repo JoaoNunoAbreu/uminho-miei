@@ -1,0 +1,6 @@
+2-Ano/2ºSemestre/Eletromagnetismo/Halliday_Vol_3_9a_Ed.pdf filter=lfs diff=lfs merge=lfs -text
+3-Ano/1º filter=lfs diff=lfs merge=lfs -text
+Semestre/BD/neo4j-community-3.5.14/bin/tools/cypher-shell.jar filter=lfs diff=lfs merge=lfs -text
+3-Ano/1º[[:space:]]Semestre/BD/neo4j-community-3.5.14/bin/tools/cypher-shell.jar filter=lfs diff=lfs merge=lfs -text
+3-Ano/2ºSemestre/MEIO/Gestão_Inventários/3.5.mp4 filter=lfs diff=lfs merge=lfs -text
+3-Ano/2ºSemestre/MEIO/Gestão_Inventários/3.7.mp4 filter=lfs diff=lfs merge=lfs -text

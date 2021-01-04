@@ -1,0 +1,23 @@
+PUBLIC_KEY = File.read(File.expand_path('~/.ssh/id_rsa.pub')).strip
+
+Vagrant.configure("2") do |config|
+
+    config.vm.define("ansible") do |ansible|
+        ansible.vm.network "private_network", ip: "10.0.0.150"
+    end
+
+    config.vm.box = "bento/ubuntu-20.04"
+
+    config.vm.provider "virtualbox" do |vb|
+        vb.memory = "512"
+        vb.cpus = "1"
+    end
+  
+    config.vm.provision "shell", inline: <<-SHELL
+        apt-get -y update
+        apt-get -y upgrade
+        apt-get -y autoremove
+        apt-get install -y vim
+        echo "#{PUBLIC_KEY}" >> /home/vagrant/.ssh/authorized_keys
+    SHELL
+end

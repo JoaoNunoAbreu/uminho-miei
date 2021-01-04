@@ -1,0 +1,57 @@
+\documentclass{llncs}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{aeguill}
+
+
+% Comentar para not MAC Users
+\usepackage[applemac]{inputenc}
+
+\usepackage{a4}
+%\usepackage[margin=3cm,nohead]{geometry}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+%\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+\mainmatter
+\title{TP2: Protocolo IPv4}
+
+\titlerunning{TP2: Protocolo IPv4}
+
+\author{Ana Luísa Pereira César\and Hugo Fernandes Matias \and João Nuno Cardoso Gonçalves de Abreu }
+
+\authorrunning{Ana Luísa Pereira de César \and Hugo Fernandes Matias \and João Nuno Cardoso Gonçalves de Abreu }
+
+
+\institute{
+Universidade do Minho, Departamento de  Informatica, 4710-057 Braga, Portugal\\
+e-mail: \{a86038,a85370,a84802\}@alunos.uminho.pt
+}
+
+\date{}
+\bibliographystyle{splncs}
+
+\maketitle
+
+\section{Respostas}
+
+\subsection{Active o wireshark ou o tcpdump no pc s1. Numa shell de s1, execute o comando traceroute -I para o endereço IP  do  host h5.    }
+temos que colocar as imagens aqui
+\subsection{Registe e analise o tráfego ICMP enviado por s1 e o tráfego ICMP recebido como resposta. Comente os resultados face ao  comportamento esperado.}
+
+Inicialmente, o host s1 envia 3 segmentos UDP cujo destino é o host h5 e com TTL=1, não obtendo resposta. \\
+Recebe, posteriormente uma resposta do router r2 a dizer que o TTL foi excedido. Isto acontece porque o TTL sendo 1 não é suficiente para alcançar o destino pretendido (h5). Com este TTL faz apenas um salto, sendo este o motivo da resposta vir do router r2.
+
+
+\subsection{Qual deve ser o valor inicial mínimo do campo TTL para alcançar o destino   h5? Verifique na prática que a sua resposta está correta}
+
+
+
+\subsection{Qual o valor médio do tempo de ida-e-volta (Round-Trip Time) obtido?}
+
+\end{document}

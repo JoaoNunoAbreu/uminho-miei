@@ -1,0 +1,8 @@
+- Media center -> pode-se fazer upload de música e vídeos se estiveres no apartamento 
+- Cada pessoa só pode fazer download das suas próprias músicas e vídeos.
+- Alguém pede a um admin para criar a conta para uma pessoa, fornecendo-lhes nome e mail.
+- Depois de criado, o user deve criar palavra-passe.
+- Tentativa de upload deve falhar nas músicas/vídeos que já estejam no media center.
+- Independentemente, as músicas/vídeos ficam gravadas na coleção do user.
+- Users com conteúdo em comum tornam-se potenciais amigos.
+- O sistema deve gerar automaticamente categorias para organizar o conteúdo mas este pode-se ser organizado de diferente forma pelo user.

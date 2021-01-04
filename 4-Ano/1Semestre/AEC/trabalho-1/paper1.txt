@@ -1,0 +1,17 @@
+Os assuntos neste relatório foram abordados de forma clara e direta aos temas importantes. O uso de imagens e o desenvolvimento aprofundado das suas funcionalidades e características permitiria, para um leitor com pouco conhecimento sobre estes temas, uma extração de informação útil sobre os conceitos Case Based Reasoning, Genetic
+Algorithms e Support Vector Machines.
+
+Apesar de tudo, na minha opinião, encontrei certos pontos que podem não estão tão claros ou quando acho que faltaria informação sobre um determinado tema.
+Esses casos serão apresentados abaixo:
+
+- Na introdução, foi afirmado que "Os Algoritmos Genéticos pertencem à classe do Reinforcement Learning." 
+No entanto, a frase dá a entender que os AGs são um algoritmo exclusivamente de Reinforcement Learning e não de Supervised e Unsupervised learning.
+
+- No capítulo "Modo de Capacidade de Aprendizagem", a definição dos métodos de implementação 
+"Exemplar based reasoning" e "Instance based reasoning" possuem o mesmo contéudo.
+
+- A descrição do ciclo CBR é demasiado superficial, deveriam ter sido mais aprofundados os processos inerentes ao funcionamento do ciclo CBR, visto que este ciclo é essencial ao CBR. Poderia-se ter explicado a relação entre cada fase do ciclo CBR ao invés de se ter simplesmente descrito cada uma das fases.
+
+- No fim do capítulo "Ferramentas de desenvolvimento", é mencionada uma tabela porém ela não é apresentada.
+
+- No capítulo "Modo de Capacidade de Aprendizagem" dos Support Vector machines, não há distinção dos 2 tipos de classificação de SVM, ou seja, qual dos 2 é o mais vantajoso e em que situações o é. No Soft Margin é dito que "permite encontrar um hiperplano que melhor divida os dados", no entanto nunca é dito o porquê. As situações onde seria o hiperplano dividiria melhor os dados seria quando existem outliers.

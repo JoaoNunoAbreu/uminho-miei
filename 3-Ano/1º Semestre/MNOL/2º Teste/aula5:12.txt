@@ -1,0 +1,145 @@
+1.1 (MATLAB_otimizacao.pdf)
+
+a)
+
+function f = qn(x)
+f = 0.25*x(1).^4 - 0.5*x(1)^2+0.1*x(1)+0.5*x(2)^2;
+end
+----------------------
+script ex1
+-
+-
+clear all;
+x1=[-1 0.5];
+op = [];
+[xmin, fmin, exitflag, output] = fminunc('qn',x1,op)
+
+------------------------------------------
+b)
+
+function [f,g] = qn(x)
+f = 0.25*x(1).^4 - 0.5*x(1)^2+0.1*x(1)+0.5*x(2)^2;
+g = [x(1)^3-x(1)+0.1
+    x(2)]; % primeira derivada em ordem a x(1) e x(2)
+
+end
+----------------------
+clear all;
+x1=[-1 0.5];
+op = optimset('GradObj','on');
+[xmin, fmin, exitflag, output] = fminunc('qn',x1,op)
+
+------------------------------------------
+
+1.2
+
+a)
+
+function [f] = qn(x)
+a = [3 4 1];
+b = [1.2 1.5 1];
+P = a(1)*(1-exp(-b(1)*x(1))) + a(2) * (1-exp(-b(2)*x(2))) + a(3)*(1-exp(-b(3)*x(1) * x(2))) - x(1) - x(2);
+f = -P; % é um problema de maximização
+end
+
+----------------------
+clear all;
+x1=[1 1];
+op = [];
+% op = optimset('GradObj','on');
+[xmin, fmin, exitflag, output] = fminunc('qn',x1,op)
+
+------------------------------------------
+
+1.3
+
+
+function [f] = qn(x)
+A = 2401;
+f=x(1)+x(2)+x(3)+A/(x(1)*x(2)*x(3));
+end
+
+----------------------
+
+clear all;
+x1=[6 7 5];
+op = optimset('HessUpdate','DFP','TolX',0.0001,'TolFun',0.0001);
+[xmin, fmin, exitflag, output] = fminunc('qn',x1,op)
+A=2401; xmin(4) = A/(xmin(1)*xmin(2)*xmin(3))
+
+------------------------------------------
+
+1.4
+
+function [f] = qn(x,n,t,m)
+i = 1:2:n-1;y(i)=x(i)*cos(t)-x(i+1)*sin(t);
+i = 2:2:n-1;y(i)=x(i)*sin(t)+x(i+1)*cos(t);
+i = n;y(i)=x(i);
+i = 1:n;
+f = -sum(sin(y).*(sin(i.*y.^2/pi)).^(2*m));
+end
+
+----------------------
+
+clear all;
+n = 5;t = pi/6; m = 10;
+i = 1:2:n; x1(i)=2; i = 2:2:n; x1(i)=1;
+op = [];
+[xmin, fmin, exitflag, output] = fminunc('qn',x1,op,n,t,m)
+
+------ Neste exemplo exit flag = 2 mas o firstorderopt tem valor próximo de 0 por isso está bem ------
+
+clear all;
+n = 10;t = pi/6; m = 10;
+i = 1:2:n; x1(i)=2; i = 2:2:n; x1(i)=1;
+op = [];
+[xmin, fmin, exitflag, output] = fminunc('qn',x1,op,n,t,m)
+
+------ Neste exemplo exit flag = 2. O firstorderopt tem valor long de 0 (1.1035) ------
+
+------------------------------------------
+
+1.5
+
+function [f] = qn(x)
+n = length(x);
+i = 1:n;
+f=1+1/4000 + sum(x.^2) - prod(cos(x./sqrt(i)));
+end
+
+----------------------
+
+clear all;
+n = 10;
+% i = 1:n; x1(i)=1;
+x1=ones(1,n);
+op = [];
+[xmin, fmin, exitflag, output] = fminunc('qn',x1,op)
+
+----------------------
+
+clear all;
+n = 25;
+% i = 1:n; x1(i)=1;
+x1=ones(1,n);
+op = [];
+[xmin, fmin, exitflag, output] = fminunc('qn',x1,op)
+
+------------------------------------------
+
+2.1
+
+function [f] = qn(x)
+u=[abs(x(1)),abs(x(2)-1)];
+f=max(u);
+end
+
+----------------------
+
+clear all;
+x1=[1 1];
+op = [];
+[xmin, fmin, exitflag, output] = fminsearch('qn',x1,op)
+
+
+VER RESOLUÇÕES DESTES EXERCÍCIOS NA BLACKBOARD RETARD

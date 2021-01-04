@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Ficha2
+comment0.text=\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ Ficha2\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=valores
+comment1.target=int\ min(int[])
+comment2.params=valores\ i\ f
+comment2.target=int[]\ paraArray(int[],\ int,\ int)
+comment3.params=a\ x
+comment3.target=boolean\ elem(int[],\ int)
+comment4.params=a\ b
+comment4.target=int[]\ comuns(int[],\ int[])
+numComments=5

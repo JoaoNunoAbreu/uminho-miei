@@ -1,0 +1,113 @@
+ESTUDO
+
+    - Fragmentação
+    - Endereçamento e encaminhamento IP
+    - Algoritmos de comutação 
+    - Protocolos ARP 
+    - Protocolos ICMP 
+    - Endereçamento MAC em redes Wi-Fi.
+
+--------------------------------------------------------------------------------------------------------------
+
+Continuação desde meio da parte 3
+
+--------------------------------------------------------------------------------------------------------------
+
+MAC addresses and ARP
+
+    - MAC (or LAN or physical or Ethernet) address:
+        used "locally" to get frame from 1 interface to another physically-connected interface
+
+
+    - MAC address: like Social Security Number
+      IP address: like postal address
+
+
+    - ARP table: each IP node (host,router) on LAN has table
+        IP/MAC address mappings for some LAN nodes: <IP address; MAC address; TTL>
+
+--------------------------------------------------------------------------------------------------------------
+
+Ethernet
+    Connectionless: no handshaking between sending and receiving NICs.
+    Unreliable: receiving NIC doesn’t send acks or nacks to sending NIC.
+        - data in dropped frames recovered only if initial sender uses higher layer reliable data transfer (rdt) protocol (e.g., TCP), otherwise dropped data lost.
+    Ethernet’s MAC protocol: unslotted CSMA/CD with binary backof.
+
+--------------------------------------------------------------------------------------------------------------
+
+Switch: self-learning
+
+    - switch learns which hosts can be reached through which interfaces
+
+--------------------------------------------------------------------------------------------------------------
+
+Switches vs. routers
+
+    - both are store-and-forward:
+        routers: network-layer devices (examine networklayer headers)
+        switches: link-layer devices (examine link-layer headers)
+
+    - both have forwarding tables:
+        routers: compute tables using routing algorithms, IP addresses
+        switches: learn forwarding table using flooding, learning, MAC addresses 
+
+--------------------------------------------------------------------------------------------------------------
+
+VLANs
+
+    - switch(es) supporting VLAN capabilities can be configured to define multiple virtual LANS over single physical LAN infrastructure.
+
+--------------------------------------------------------------------------------------------------------------
+
+Wireless Link Characteristics
+
+Important differences from wired link ...
+    - decreased signal strength: radio signal attenuates as it propagates through matter (path loss)
+    - interference from other sources: standardized wireless network frequencies (e.g., 2.4 GHz) shared by other devices (e.g., phone); devices (motors) interfere as well
+    - multipath propagation: radio signal reflects off objects ground, arriving at destination at slightly different times
+
+- Hidden terminal problem
+- Signal attenuation
+- ver imagem wireless_problems
+
+Avoiding collisions
+    - avoid data frame collisions completely using small reservation packets!
+
+--------------------------------------------------------------------------------------------------------------
+
+Wireless Mobility
+
+    - let routing handle it: routers advertise permanent address of mobile-nodes-in-residence via usual routing table exchange. (not scalable to millions of mobiles)
+        routing tables indicate where each mobile located 
+        no changes to end-systems
+    - let end-systems handle it:
+
+        indirect routing: 
+            communication from correspondent to mobile goes through home agent, then forwarded to remote
+            mobile uses two addresses:
+                permanent address: used by correspondent (hence mobile location is transparent to correspondent)
+                care-of-address: used by home agent to forward datagrams to mobile
+            foreign agent functions may be done by mobile itself
+            triangle routing: correspondent-home-networkmobile
+
+        direct routing: 
+            correspondent gets foreign address of mobile, sends directly to mobile
+            end result: foreign agent knows about mobile and home agent knows location of mobile
+
+
+Indirect routing: moving between networks
+
+- Suppose mobile user moves to another network
+    - registers with new foreign agent
+    - new foreign agent registers with home agent
+    - home agent update care-of-address for mobile
+    - packets continue to be forwarded to mobile (but with new care-of-address)
+
+- Mobility, changing foreign networks transparent: on going connections can be maintained!
+
+
+Mobility via direct routing: comments
+
+- overcome triangle routing problem
+- non-transparent to correspondent: correspondent must get care-of-address from home agent

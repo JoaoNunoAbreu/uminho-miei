@@ -1,0 +1,76 @@
+MATLAB
+
+-- Para alterar os valores de TolX e TolFun
+op = optimset('tolfun',0.1,'tolx',0.01);
+
+-- Para resolver sistema de funções não lineares:
+[x,fval,exitflag, output] = fsolve('funcao', x1, op)
+x1 - aproximação inicial
+op - opções
+
+-- Exemplo para criar funções
+function f = funEX1TESTETIPO(x)
+f(1)= -5x(1) + 3sin(x(1)) + cos(x(2));
+f(2)= 4cos(x(1)) + 2sin(x(2)) - 5*x(2);
+
+-- Para que haja interpolação usando um polinómio de grau N o número de pontos tem de ser igual a N + 1 (METER SÓ ESTES ÚLTIMOS NO MATLAB)
+
+-- Para resolver um polinómio de grau n
+Pn = polyfit(x,f,n) -> retorna um polinómio
+polyval(Pn,a) -> substitui x por a na Pn
+
+-------------------------------------------------------------------------------------------------------------------
+
+-- ’Spline’ cúbica sem considerar derivadas nos extremos (Tabela sem função definida)
+
+Inserir linha x
+Inserir linha f(x)
+s3 = spline(x,f)
+Contar número de segmento e ir ver a linha de s = s3.coefs.
+  5
+S   (x) = coef1(x- pi)^num colunas-1 + coef2(x-pi)^num colunas-2 + ... + coef n
+  3
+
+pi = ponto inicial do segmento
+
+xx = spline (x,f,5.45)
+
+----------------------------
+
+-- ’Spline’ cúbica completa (Tabela sem função definida)
+
+d0=(f(2)-f(1))/(x(2)-x(1));
+dn=(f(n)-f(n-1))/(x(n)-x(n-1));
+Reescrever x e f sem o segundo e penúltimo elemento.
+s3 = spline(x, [d0 , f , dn] )
+Contar o número de segmento (tabela atualizada) e ir ver a linha de s = s3.coefs.
+xx = spline (x,[d0,f,dn],5.45)
+
+NOTA: Spline sem considerar derivadas nos extremos e completa têm de dar o mesmo resultado mas polinómios diferentes.
+
+---------------------------------------------------------
+
+-- ’Spline’ cúbica sem considerar derivadas nos extremos (Tabela com função definida)
+
+igual ao com tabela sem função definida
+
+----------------------------
+
+-- ’Spline’ cúbica completa (Tabela com função definida) !!!!!! NÃO REESCREVER x e f !!!!!!
+
+d0 = f'(x1)
+dn = f'(xn)
+s3=spline(x,[d0 f dn]);
+xx=spline(x,[d0 f dn],2.5);
+
+-------------------------------------------------------------------------------------------------------------------
+
+trapz -> tabela de pontos
+trapz(x,f)
+
+quad -> conhecer a função
+[I,np] = quad('int',a,b,tol)
+
+function f = int(x)
+f = x.^2+1./(x+1)
+end

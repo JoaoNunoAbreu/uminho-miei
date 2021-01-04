@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Ponto3D
+comment0.text=\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ Ponto3D\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=
+comment1.target=Ponto3D()
+comment1.text=\n\ COnstrutor\ para\ objetos\ da\ classe\ Ponto3D\n
+comment2.params=x\ y\ z
+comment2.target=Ponto3D(int,\ int,\ int)
+comment3.params=ponto
+comment3.target=Ponto3D(Ponto3D)
+comment4.params=
+comment4.target=int\ getZ()
+comment5.params=z
+comment5.target=void\ setZ(int)
+comment6.params=
+comment6.target=Ponto3D\ clone()
+comment7.params=o
+comment7.target=boolean\ equals(java.lang.Object)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment9.params=x\ y\ z
+comment9.target=void\ movePonto(int,\ int,\ int)
+numComments=10

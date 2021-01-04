@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Testes
+comment0.text=\n\ A\ classe\ de\ teste\ Testes.\n\n\ @author\ \ (seu\ nome)\n\ @version\ (um\ n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=
+comment1.target=Testes()
+comment1.text=\n\ Construtor\ default\ para\ a\ classe\ de\ teste\ Testes\n
+comment2.params=
+comment2.target=void\ setUp()
+comment2.text=\n\ Define\ a\ .\n\n\ Chamado\ antes\ de\ cada\ m\u00E9todo\ de\ caso\ de\ teste.\n
+comment3.params=
+comment3.target=void\ testeKeySet()
+comment4.params=
+comment4.target=void\ testeSize()
+comment5.params=
+comment5.target=void\ tearDown()
+comment5.text=\n\ Tears\ down\ the\ test\ fixture.\n\n\ Chamado\ ap\u00F3s\ cada\ m\u00E9todo\ de\ teste\ de\ caso.\n
+numComments=6

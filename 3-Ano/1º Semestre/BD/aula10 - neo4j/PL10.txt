@@ -1,0 +1,23 @@
+-- PL 10
+
+1. match(n) return count(n);
+
+2. match()-[r]->() return count(r);
+
+3. match(m:Movie{title: 'The Matrix'})<-[:ACTED_IN]-(p:Person) return m,p;
+
+4. match(p:Person{name: 'Tom Hanks'})-[:ACTED_IN]->(m:Movie) return p,m;
+
+5. match(p:Person{name: 'Tom Hanks'})-[:ACTED_IN]->(m:Movie) where m.released > 2000 return p,m;
+
+6. match (p:Person)-[:ACTED_IN]-(m:Movie)<-[:DIRECTED]-(p) return p,m;
+
+7. match (p:Person{name: 'Keanu Reeves'})-[:ACTED_IN{roles:['Neo']}]-(m:Movie) return p,m;
+
+8. match (p1:Person)-[:ACTED_IN]-(m:Movie)<-[:DIRECTED]-(p2:Person) return p1,collect(distinct(p2));
+
+9. match (actor:Person)-[:ACTED_IN]->(m:Movie) with actor, count(m) as m_count return actor,m_count order by m_count DESC;
+
+10. match (a:Person)-[:ACTED_IN]->(m:Movie)<-[:DIRECTED]-(b:Person) with a,b, count(m) as m_count return a,b,m_count;
+
+11. match (a:Person)-[:ACTED_IN]->(m:Movie) with a, count(m) as m_count return a,m_count order by m_count DESC limit 5;

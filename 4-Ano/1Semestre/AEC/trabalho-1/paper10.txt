@@ -1,0 +1,11 @@
+Os assuntos neste relatório foram abordados de forma clara e direta aos temas importantes. O uso de imagens e o desenvolvimento aprofundado das suas funcionalidades e características permitiria, para um leitor com pouco conhecimento sobre estes temas, uma extração de informação útil sobre os conceitos Case Based Reasoning, Particle Swarm Optimization e Support Vector Machines.
+
+Apesar de tudo, encontrei certos pontos que, na minha opinião, podem não estão tão claros ou quando acho que faltaria informação sobre um determinado tema, principalmente ao capítulo dos Support Vector Machines. De facto, os conceitos Case Based Reasoning e Particle Swarm Optimization foram abordados de forma compreensiva e explicíta, sem necessidade de apontar certas imperfeições.
+Esses casos serão apresentados abaixo:
+
+- Apesar de cada capítulo ter o seu parágrafo introdutório, deveria-se ter feito uma introdução global a todo o relatório a apresentar.
+
+- Na "Descrição característica" do capítulo do SVM, é dito " Como existe vários possíveis hyperplanes a melhor escolha é o que representa o maior distancia entre duas classes.", no entanto isso é uma afirmação falsa. Os SVMs usam o support vector classifier (ou soft margin classifier) que tolera classificações erradas, logo o hiperplano ótimo para dividir as classes pode não ser necessariamente o que garanta maior distância entre as classes. Deveria haver uma distinção clara entre Hard Margin Classifier e Soft Margin Classifier presente no relatório.
+
+- Na "Descrição característica" do capítulo do SVM, não há referência ao caso de no conjunto de dados não ser percetível uma divisão clara. Para isso é necessário ter uma nova perspetiva, como por exemplo aumentar uma dimensão e expandir o espaço em questão. Esta técnica chama-se kernelling e consiste em aumentar a dimensão até ser possível reconhecer um hiperplano. E isso é a essência das Support Vector Machines.
+

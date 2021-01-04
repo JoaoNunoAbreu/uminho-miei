@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=CarroNotFoundException
+comment1.params=msg
+comment1.target=CarroNotFoundException(java.lang.String)
+numComments=2

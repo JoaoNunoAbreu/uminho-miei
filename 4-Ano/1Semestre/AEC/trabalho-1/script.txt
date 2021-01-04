@@ -1,0 +1,37 @@
+Nesta secção, veremos as mais promissoras ferramentas e bibliotecas open source para começar a construir projetos com Reinforcement Learning, tais como:
+
+OpenAI Gym - é o ambiente mais popular de desenvolvimento e comparação de modelos de Aprendizagem por Reforço, oferecendo suporte para treino de agentes usados em jogos clássicos como Atari, usando um ambiente de simulação de Inteligência Artificial em Python.
+
+TensorFlow - esta é uma outra biblioteca open-source conhecida da Google, usada por muitos programadores todos os dias nas áreas de processamento de linguagem natural, chatbots inteligentes, robótica e muito mais. A comunidade TensorFlow desenvolveu uma versão estendida chamada TensorLayer, que fornece módulos de Reinforcement Learning que podem ser facilmente customizados e montados para enfrentar os desafios de Machine Learning do mundo real.
+
+Keras - apresenta simplicidade na implementação de Redes Neuronais com apenas algumas linhas de código de rápida execução, não deixando de ser compatível com outras ferramentas desta área.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+As ferramentas listadas em baixo vão desde bibliotecas C++ a ambientes gráficos de arrastar e soltar. Algumas são Support Vector Machines puras e outras são plataformas de data mining que incluem SVM, tais como: ​
+
+- LIBSVM: é uma ferramenta open source desenvolvida em C++ para a utilização de SVM em contextos de classificação linear/não linear e regressão estatística. Além disso, suporta a classificação em ambientes com mais do que duas classes de dados; ​
+
+- KNIME: é uma interface gráfica baseada em ferramentas de data mining de ampla funcionalidade com suporte SVM particularmente fácil de usar; ​
+
+- Scikit-learn : é uma biblioteca de Machine Learning open-source para a linguagem de programação Python. Inclui vários algoritmos de classificação, regressãao e clustering incluindo SVM e é desenhada para interagir com as bibliotecas de Python: NumPy e SciPy. 
+
+------------------------------------------
+
+Algumas das aplicações mais comuns de SVM na vida real apresentam-se de seguida.
+
+- Reconhecimento facil - É o algoritmo que, a partir de uma imagem ou um vídeo de uma cena, identifica ou verifica uma ou mais pessoas usando um conjunto de dados de faces, criando um quadrado em volta das partes classificadas como cara.
+
+- Categorização de texto - O algoritmo usa dados de treino para classificar documentos em diferentes categorias, como artigos de notícias, emails e páginas web. Para cada documento, calcula uma pontuação e compara-a com um valor limite predefinido. Quando a pontuação de um documento ultrapassa o valor limite, o documento é classificado numa categoria definitiva. Se não ultrapassar o valor limite, considera-o como um documento geral.
+
+- Bioinformática - Usa SVM para identificar e classificar genes, pacientes baseando-se nos genes e outros problemas biológicos.
+
+- Reconhecimento de caligrafia - Uso de SVM para reconhecer os caracteres mais frequentemente usados. Também se pode usar SVM para reconhecer caracteres escritos à mão que são usados para entrada de dados e validação de assinaturas em documentos.
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+

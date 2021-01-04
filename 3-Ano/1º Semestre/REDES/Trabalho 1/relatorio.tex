@@ -1,0 +1,166 @@
+\documentclass{llncs}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{aeguill}
+
+
+% Comentar para not MAC Users
+\usepackage[applemac]{inputenc}
+
+\usepackage{a4}
+%\usepackage[margin=3cm,nohead]{geometry}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+%\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+\mainmatter
+\title{Edge and Fog Networking}
+
+\titlerunning{Edge and Fog Networking}
+
+\author{Ana Luísa Pereira César\and Hugo Fernandes Matias \and João Nuno Cardoso Gonçalves de Abreu }
+
+\authorrunning{Ana Luísa Pereira de César \and Hugo Fernandes Matias \and João Nuno Cardoso Gonçalves de Abreu }
+
+
+\institute{
+Universidade do Minho, Departamento de  Informatica, 4710-057 Braga, Portugal\\
+e-mail: \{a86038,a85370,a84802\}@alunos.uminho.pt
+}
+
+\date{}
+\bibliographystyle{splncs}
+
+\maketitle
+\begin{abstract}
+Com o desenvolvimento da tecnologia, a IoT(Internet of Things) está cada vez mais presente nas nossas vidas.Esta progressão requesta uma necessidade de alívio da quantidade de dados e pedidos enviados para a cloud. Em resposta a este adversidade, nascem as formas de computação Fog e Edge Computing.
+\end{abstract}
+
+\section{Introdução}
+
+Com a explosão de dados, dispositivos e interações, a computação em nuvem por si só não consegue lidar com o fluxo de informações. Embora a cloud nos dê acesso à computação, armazenamento e até conectividade que podemos ter acesso de uma maneira fácil e econômica, estes recursos centralizados podem criar atrasos e problemas de desempenho para dispositivos e dados que estão longe de uma nuvem pública central ou de uma fonte de dados .\cite{1}
+A alta latência obtida com o envio diário de grandes volumes de dados para a nuvem, para processamento adicional, é insuficiente para atender aos requisitos rigorosos dos aplicativos IoT emergentes. Como consequência, os pesquisadores introduziram novos paradigmas, como a computação de borda e neblina, com o objetivo de ampliar os recursos da nuvem para mais perto da borda da rede.\cite{2} 
+
+
+\section{Contextualização}
+
+\subsection{Cloud Computing}
+
+A última década presenciou o surgimento da Computação em nuvem como um novo paradigma da computação. A sua visão é a centralização da computação, armazenamento e a gestão de rede nas nuvens.\cite{3}
+O surgimento da computação em nuvem causou um tremendo impacto no setor da Tecnologia da Informação (TI) nos últimos anos, onde grandes empresas como a Google, Amazon e Microsoft se esforçam cada vez mais para fornecer uma cloud mais poderosa, confiável e econômica. Plataformas e empresas de negócios buscam remodelar os seus modelos de negócios para obter benefícios deste novo paradigma. De fato, a computação em nuvem fornece vários recursos atraentes que a tornam bastante apelativa para os empresários.\cite{4}
+
+\subsubsection{O problema da segurança}
+A falta de segurança é um dos grandes obstáculo na ampla adoção da computação em nuvem. A computação em nuvem é cercada por muitos problemas de segurança, como proteger dados e examinar a utilização da nuvem pelos fornecedores deste modo de computação.\cite{5}
+
+\subsubsection{Amazon}
+A computação em nuvem tem impulsionado o rápido crescimento de muitas empresas de Internet. Por exemplo, o negócio na nuvem passou a ser o setor mais lucrativo para a Amazon, e o sucesso da Dropbox depende muito do serviço de nuvem detentido pela Amazon.\cite{3}
+O Amazon Web Services (AWS) é um conjunto de serviços em nuvem, que fornece computação, armazenamento e outras funcionalidades com base na nuvem que permitem que organizações e indivíduos implementem diversas aplicações e serviços sob demanda e a preços cómodos \cite{4}, uma vez que deixa de haver a necessidade de comprar quer seja hardware e/ou software responsáveis pelo funcionamento das mais diversas necessidades. \cite{6}
+
+\subsection{Edge Networking}
+A proliferação da IoT e o sucesso dos complexos serviços da cloud estimularam a criação de um novo paradigma de computação, a computação de borda.\cite{7}Este tipo de computação está fundamentalmente baseada na aproximação do processamento à fonte de dados, não sendo necessário o envio para uma nuvem remota ou outros sitemas centralizados para processamento.Ao eliminar a distância e o tempo necessários para enviar dados para fontes centralizadas, podemos melhorar a velocidade e o desempenho do transporte de dados, além do funcionamento de dispositivos e aplicativos. \cite{1}Em certos casos é muito mais eficente preocessar os dados perto da fonte e enviar apenas os dados mais relevantes para um centro de dados remoto.
+
+\subsubsection{Internet of Things}
+Como podemos facilmente perceber, dispositivos conectados são um exemplo claro de uso da arquitetura de computação de borda. Com sensores remotos instalados numa máquina, componente ou dispositivo, são geradas grandes quantidades de dados. Se estes dados forem enviados por um longo caminho de rede para serem analisados, registados e rastreados, isso levará muito mais tempo para obter uma resposta do que o caso em que os dados são processados na borda da nuvem, o mais próximo à fonte dos dados possível.\cite{1}
+
+\subsubsection{Mobile Edge Computing}
+"Mobile Edge Computing é um modelo de computação que permite que a plataforma de computação na cloud, orientada para os negócios, dentro da rede de acesso por rádio, nas proximidades de assinantes móveis, atenda a aplicativos sensíveis a conteúdo e sensíveis ao atraso".\cite{8}
+Os seus principais objetivos são garantir a otimização de recursos móveis, hospedando aplicativos de computação intensivos, como processamento de imagem, m-gaming, na rede de borda e a otimização dos grandes dados antes de os enviar para a nuvem. \cite{8}
+
+\subsubsection{Problemas}
+As plataformas edge tendem a ser dispositivos restritos, com a capacidade da bateria ou a memória sendo frequentemente o fator limitador, e não a capacidade de computação em si. Isso pode causar contenção de recursos se vários aplicativos de IoT precisarem ser implantados simultaneamente.\cite{9} Além disso, não há plataformas de tempo de execução ou gerenciamento bem definidas para compor aplicativos genéricos de computação Edge. Como resultado, a computação de borda é limitada a soluções sob medida.\cite{10}
+
+\subsection{Fog Networking}
+
+Recentemente, a computação em neblina surgiu como uma ferramenta para processamento de baixa latência e rica em recursos para fluxos de observação.\cite{10} De notar que Fog Computing surge para complementar a computação em Edge e Cloud, e não substituir.
+A computação em nevoeiro é uma infraestrutura de computação descentralizada na qual dados, computação, armazenamento e aplicativos estão localizados em algum lugar entre a fonte de dados e a nuvem. Como a computação de borda, a computação em nevoeiro aproxima as vantagens e o poder da nuvem de onde os dados são criados e usados.\cite{11} Deste modo a computação em nevoeiro é vista como a "nuvem mais próxima da terra".
+
+\subsubsection{Aplicações}
+Carros conectados:Carros autónomos estão agora disponíveis no mercado e produzem uma grande quantidade de dados. Os dados precisam ser analisados e processados rapidamente com base nas informações fornecidas, como tráfego, condições de direção, clima etc. Todos esses dados são processados rapidamente com a ajuda da computação em neblina. Outros dados, como manutenção do veículo, rastreamento são enviados diretamente ao fabricante.
+
+Redes inteligentes e cidades inteligentes:
+Para uma execução eficaz, os sistemas utilitários fazem o uso de dados em tempo real. É essencial processar os dados remotos perto do local onde são criados. Também é possível que os dados sejam gerados a partir de muitos sensores. A computação em nevoeiro é projetada de maneira que possa resolver os dois problemas. \cite{12}
+
+
+
+
+\begin{table}[]
+\begin{tabular}{lll}
+\hline
+                       & Fog Computing                                                                                                                & Cloud Coumputing                                                                                                      \\ \hline
+Usuário Alvo           & Usuários móveis                                                                                                              & Usuários gerais da Internet.                                                                                          \\
+Tipo de Serviço        & \begin{tabular}[c]{@{}l@{}}Serviços de informação limitados relacionados \\ a locais de implantação específicos\end{tabular} & Informação global proveniente de todo o mundo                                                                         \\
+Hardware               & \begin{tabular}[c]{@{}l@{}}Armazenamento limitado, energia de \\ computação e interface sem fio\end{tabular}                 & Espaço de armazenamento amplo e escalável                                                                             \\ \hline
+Distância aos usuários & Na proximidade física da fonte dos dados                                                                                     & \begin{tabular}[c]{@{}l@{}}Longe dos usuários e comunicação através\\  de redes IP\end{tabular}                       \\
+Ambiente de Trabalho   & Outdoor ou Indoor                                                                                                            & \begin{tabular}[c]{@{}l@{}}Prédio do tamanho de um armazém com\\  sistemas de ar condicionado\end{tabular}            \\
+Desenvolvimento        & \begin{tabular}[c]{@{}l@{}}Centralizado ou distribuído em áreas\\  regionais por empresas locais\end{tabular}                & \begin{tabular}[c]{@{}l@{}}Central e manutenção assegurada por diversas \\ empresas(Amazon, Google, etc)\end{tabular}
+\end{tabular}
+\end{table}
+
+
+%ou inserir directamente os vários \bibitem  
+\begin{thebibliography}{1}
+\bibitem{1}
+David Linthicum, in Cisco: "Edge computing vs. fog computing: Definitions and enterprise uses"
+\newblock {Available: https://www.cisco.com/c/en/us/solutions/enterprise-networks/edge-computing.html} 
+
+\bibitem{2}
+Schahram Dustdar, Cosmin Avasalcai, Ilir Murturi:
+\newblock {2019 IEEE International Conference on Service-Oriented System Engineering (SOSE)}.
+\newblock {"Invited Paper: Edge and Fog Computing: Vision and Research Challenges"} (2019,Volume: 1, Pages: 96-9609)
+
+\bibitem{3}
+Yuyi Mao, Student Member, IEEE, Changsheng You, Student Member, IEEE, Jun Zhang, Senior Member, IEEE, Kaibin Huang, Senior Member, IEEE, and Khaled B. Letaief, Fellow, IEEE:
+\newblock {"A Survey on Mobile Edge Computing: The Communication Perspective"} 
+
+\bibitem{4}
+Qi Zhang, Lu Cheng, Raouf Boutaba:
+\newblock {"Cloud computing: state-of-the-art and research challenges"}(2010)
+
+\bibitem{5}
+Farhan Bashir Shaikh, Sajjad Haider:
+\newblock {"Security threats in cloud computing"} 
+\newblock{Published in: 2011 International Conference for Internet Technology and Secured Transactions}
+
+\bibitem{6}
+Eric Knorr:
+\newblock {"What is cloud computing? Everything you need to know now"} 
+\newblock{Available in: https://www.infoworld.com/article/2683784/what-is-cloud-computing.html}
+
+\bibitem{7}
+Weisong Shi, Jie Cao, Quan Zhang, Youhuizi Li, Lanyu Xu:
+\newblock {"Edge Computing: Vision and Challenges"} 
+\newblock{Available in: https://ieeexplore.ieee.org/abstract/document/7488250/authors#authors}
+
+\bibitem{8}
+Arif Ahmed, Ejaz Ahmed:
+\newblock {"A Survey on Mobile Edge Computing"} 
+\newblock{10th IEEE International Conference on Intelligent Systems and Control (ISCO 2016)}
+
+\bibitem{9}
+A. V. Dastjerdi, R. Buyya:
+\newblock {"Fog computing: Helping the internet of things realize its potential"} 
+\newblock{Computer, vol. 49, no. 8, 2016.}
+
+\bibitem{10}
+Prateeksha Varshney, Yogesh Simmhan:
+\newblock {"Demystifying Fog Computing: Characterizing Architectures, Applications and Abstractions"} 
+\newblock{ 2017 IEEE 1st At International Conference on Fog and Edge Computing (ICFEC)}
+
+\bibitem{11}
+Margaret Rouse:
+\newblock {"Cutting edge: IT's guide to edge data centers"} 
+\newblock{ Available in: https://internetofthingsagenda.techtarget.com/definition/fog-computing-fogging}
+
+\bibitem{12}
+Siva Prasanna:
+\newblock {"Fog Computing And Real World Applications"} 
+
+\end{thebibliography}
+
+
+\end{document}

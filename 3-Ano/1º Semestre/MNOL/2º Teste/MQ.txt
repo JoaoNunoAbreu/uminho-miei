@@ -1,0 +1,52 @@
+%ex57
+%polinómio de grau 1
+x = [1.5 2.0 3.0 4.0]
+f_x = [4.9 3.3 2.0 1.5]
+
+[p1,r1] = polyfit(x,f_x,1)
+
+%-1.2915X +6,3153
+
+%r.normr é a raiz quadrada de S (resíduo)
+
+S1 = r1.normr^2
+
+%polinómio de grau 2
+[p2,r2] = polyfit(x,f_x,2)
+S2 = r2.normr^2
+
+%polinómio de grau 3
+[p3,r3] = polyfit(x,f_x,3)
+S3 = r3.normr^2
+
+%se nos pedirem algum valor para os modelos polinomiais, basta fazer
+%polival
+
+
+%modelo não polinomial
+% c são os dois coeficientes, S é o resíduo
+% Como é um método iterativo precisa de um valor inicia, se não for dado
+% então
+% precisa de um vetor de 1's com a dimemsão do modelo(nº de coeficientes)
+[c,S] = lsqcurvefit('Mq', [1,1], x, f_x)
+% 7.4054/x - 0.1175x
+
+%para avaliar num ponto já não possso usar polyval, usar:
+Mq(c,2.5)
+------------------------------------
+x=[0 1 2.5 2.75 4 7];
+f=[-5 2 1 5 -2 1];
+plot(x,f,'or')
+xaux=0:0.01:7;
+[p2,raiz_de_s]=polyfit(x,f,2)
+% yaux2=polyval(p2,xaux);
+% hold on;
+% plot(xaux,yaux2,'b')
+% p4=polyfit(x,f,4);
+% yaux4=polyval(p4,xaux);
+% hold on;
+% plot(xaux,yaux4,'m')
+------------------------------------
+function [M] = MQ(c,x)
+M = c(1).x.^2 + c(2) . log(x+1) + c(3).*(1./x+1);
+end

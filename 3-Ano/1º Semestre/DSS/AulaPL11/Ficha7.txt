@@ -1,0 +1,10 @@
+7.2.1
+
+3) 
+	Viatura(idV, tipo, nif)				-->	idV = PK, nif = FK
+	Registo(codR, di, df, idP, idV)			-->	codR = PK,  idP = FK, idV = FK
+	Parque(idP)						-->	idP = PK
+	Condutor(nif)						-->	nif = PK
+	ParqueTipoViatura(idP, tipo, preco)		-->	idP = PK, tipo = PK
+
+

@@ -1,0 +1,43 @@
+8
+10
+1  3  5 1000
+1  4  4 1000
+2  3  7 1000
+2  4  8 1000
+3  5  0  120
+4  6  0   60
+5  7  6 1000
+5  8  2 1000
+6  7  4 1000
+6  8  3 1000
+70
+100
+0
+0
+0
+0
+-90
+-80
+
+Exercício 26, alínea a), de Exercicios_IO_07_08.pdf
+
+Existem capacidades associadas aos vértices C e D:
+
+- o vértice C é desdobrado em C' e C'', e é criado um arco de capacidade 120 entre C' e C'', e 
+
+- o vértice D é desdobrado em D' e D'', e é criado um arco de capacidade 60 entre D' e D''.
+
+vértice A - vértice 1
+vértice B - vértice 2
+vértice C' - vértice 3
+vértice D' - vértice 4
+vértice C'' - vértice 5
+vértice D'' - vértice 6
+vértice E - vértice 7
+vértice F - vértice 8
+
+
+
+
+
+

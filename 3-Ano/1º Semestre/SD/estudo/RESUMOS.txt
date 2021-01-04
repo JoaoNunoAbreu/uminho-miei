@@ -1,0 +1,138 @@
+RESUMOS
+
+Sistemas Distribuídos : Collection of autonomous computing elements but resulting in a single coherent system
+
+------------------------------------------------------------------------------------------------
+
+- Definition of mutual exclusion:
+    – No two threads in the critical section
+    – No deadlock / no starvation
+
+- No Deadlock Example
+    – if only one wants in, it gets in
+    – if both want in, one gets in.
+    – This is a liveness property
+
+------------------------------------------------------------------------------------------------
+
+Criação de Sockets - VER IMAGEM 1
+
+Na comunicação síncrona o processo origem ao enviar a mensagem fica bloqueado até que o processo destino até que a recepção correspondente seja realizada. Quando uma recepção é realizada o processo fica bloqueado até que a mensagem chegue. Assim, tanto a operação send quanto a operação receive são bloqueantes na comunicação síncrona. Esta é a forma padrão de comunicação entre os processos.
+
+Na comunicação assíncrona o processo origem ao enviar a mensagem fica liberado para prosseguir seu processamento, quanto a mensagem é enviada ao destino. Neste caso, a recepção da mensagem pode ser bloqueante ou não bloqueante. Na recepção não bloqueante o processo destino prossegue seu processamento até que a mensagem seja entregue. Na recepção bloqueante o processo destino é bloqueado enquanto e mensagem é transmitida e somente é liberado quando a mensagem é entregue.
+
+------------------------------------------------------------------------------------------------
+
+Code Migration
+
+- Desvantagens:
+    – Security: Constrain what the code can do
+    – Efficiency: Allow code to run closer to the hardware
+
+Client-server extends the threading paradigm to distributed systems (Contributes to access transparency)
+
+Code migration mitigates the negative impacts of client-server interactions in distributed systems
+
+------------------------------------------------------------------------------------------------
+
+Naming:
+
+- Flat naming
+    - Does not scale to large number of clients and servers
+    - Does not allow distributed administration authority
+
+- Hierarchical naming
+    - Efficient lookup
+    - Allows distributed administrative authority
+    - There is still a bottleneck and SPOF at root node
+
+- Distributed Hash Table (DHT)
+    - No single root node
+        – No bottleneck and no SPOF
+    - Efficient lookup
+
+- Simple in the small scale, but hard in the large scale
+    - Naming is key to location transparency
+    - It is also necessary for relocation transparency
+
+------------------------------------------------------------------------------------------------
+
+RPC / RMI:
+
+- Middleware que esconde interações entre client/server com invocações de métodos
+
+------------------------------------------------------------------------------------------------
+
+Reference vs Value
+
+- Objects can be returned by reference or value
+    – Multiple round trips vs data copied
+    – Immutable vs shared state
+
+- Remote invocation middleware hides distribution and location of server code:
+    – Access transparency
+    – Location transparency
+- Complete transparency is impossible and even undesirable
+    – Network/server faults and invocation semantics
+    – Value vs reference
+
+------------------------------------------------------------------------------------------------
+
+Clock sync
+
+- Network Time Protocol (NTP):
+    – assume delays are the same = ((T2-T1)+(T4-T3))/2
+    – repeat several times and pick the smallest T4-T1
+- Reference Base Synchronization (RBS):
+    – assume true broadcast medium (aprox. zero delay)
+
+What counts is that related events at different processes happen in the correct order
+
+------------------------------------------------------------------------------------------------
+
+Transparency: make distribution invisible to users/developers
+– Access        -> Remote Invocation
+– Location      -> Naming
+– Relocation    -> Naming 
+– Migration     -> Virtualization
+– Concurrency   -> Threading models
+– Replication   -> Fault-tolerance 
+– Failure       -> Fault-tolerance
+
+------------------------------------------------------------------------------------------------
+
+Software architectures
+
+Layered architecture:
+    – Standard interfaces and interchangeable layers
+    – Separation of concerns:
+        - Computation
+        - Persistence
+
+Object-based:
+    – Generalizes client/server
+    – Encapsulate state and computation
+
+Resource-based:
+    – Interface with limited set of verbs and standar naming
+    – Operation semantics adequate for distribution (idempotent, cacheable)
+
+------------------------------------------------------------------------------------------------
+
+Centralized architecture relies on central node for operation
+– Simpler
+– Bottleneck and SPOF
+(Ocorre um Bottleneck quando a capacidade de um sistema é limitada por um único componente. Um single point of failure (SPOF) é uma parte do sistema que, se falha, vai impedir o sistema inteiro de continuar)
+
+Decentralized makes all nodes equal
+– No bottleneck or SPOF
+
+Hybrid architecture:
+– No bottleneck, as metadata load is lower
+– Still a SPOF
+
+------------------------------------------------------------------------------------------------
+
+TRANSPARÊNCIA - Ver imagem 2
+
+253,254,238

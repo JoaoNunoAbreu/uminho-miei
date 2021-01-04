@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6196a80d-8b0c-4ae3-921f-7888172d10ee" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cogTvAXtgQEJh2WRNDNUnrDfCk" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.ParserAdjacencia">
+    <configuration name="Parser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <output_file path="paragem.pl" is_save="true" />
+      <option name="MAIN_CLASS_NAME" value="Parser" />
+      <module name="SRCR-Individual" />
+      <option name="PROGRAM_PARAMETERS" value="inputs/paragem_autocarros_oeiras_processado_4.csv" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParserAdjacencia" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <output_file path="adjacencias.pl" is_save="true" />
+      <option name="MAIN_CLASS_NAME" value="ParserAdjacencia" />
+      <module name="SRCR-Individual" />
+      <option name="PROGRAM_PARAMETERS" value="inputs/lista_adjacencias_paragens(3).xlsx" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Parser" />
+      <item itemvalue="Application.ParserAdjacencia" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ParserAdjacencia" />
+        <item itemvalue="Application.Parser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6196a80d-8b0c-4ae3-921f-7888172d10ee" name="Default Changelist" comment="" />
+      <created>1591200370688</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591200370688</updated>
+      <workItem from="1591200373737" duration="19734000" />
+      <workItem from="1591276734823" duration="5331000" />
+      <workItem from="1591365500018" duration="7517000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

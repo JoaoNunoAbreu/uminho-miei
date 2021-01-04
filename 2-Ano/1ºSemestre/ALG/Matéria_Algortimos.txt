@@ -1,0 +1,34 @@
+Matéria Algoritmos
+
+--------------------------- Data structures -------------------------
+
+- AVL trees
+- MinHeap
+- HashTables
+	- Closed adressing (Lista ligada chain)
+	- Open adressing (Status)
+
+
+-------------------------------- Grafos --------------------------------
+
+Matrizes de adjacência 			
+Listas de adjacência 				
+Travessia Depth First				
+Travessia Breadth First				
+- Outros algoritmos
+- Árvore geradora de custo mínimo
+	- Prim (com orla)		
+- Caminhos mais curtos
+	- Djikstra (calcula caminho +       	 
+	  curto para um vértice)
+	- Warshall (calcula caminho +  
+	curto para todos os vértices)
+
+--------------------------------------------------------------------------------
+
+2015 - AVL, Prim
+2016 - MinHeap, Warshall
+2017 - AVL, Hashtables
+2018 - MinHeap (pouco) , Hashtables
+
+

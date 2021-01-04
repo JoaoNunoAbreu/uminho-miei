@@ -1,0 +1,33 @@
+TESTE 2
+
+MÍNIMOS QUADRADOS
+
+- Recta
+
+p1(x) = c0P0(x) + c1P1(x)
+
+P0(x) = 1
+P1(x) = x - B0
+
+B0 = Σxi / Σ1
+
+c0 = Σfi / Σ1
+c1 = Σ(fiP1(xi)) / Σ(P1(xi)^2) --> Adicionar estas 2 colunas à tabela inicial
+
+- Parábola
+
+p2(x) = p1(x) + c2P2(x)
+
+fazer o mesmo
+
+- Com modelo
+
+------------------------------------------------------------------------------------------------------------
+
+Δf = ...
+
+Δf = [0,0,0]
+
+Δ²f = ...
+
+Δ²f = [resultado da Δf = [0,0,0]]

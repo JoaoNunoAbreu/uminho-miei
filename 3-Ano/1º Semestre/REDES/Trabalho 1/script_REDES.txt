@@ -1,0 +1,27 @@
+O Edge networking está fundamentalmente baseado na aproximação do processamento à fonte de dados, não sendo necessário o envio para uma nuvem remota ou outros sistemas centralizados para processamento. Ao eliminar a distância e o tempo necessários para enviar dados, podemos melhorar o desempenho do transporte de dados havendo muita mais eficiência no processamento dos dados na fonte.
+
+Há muita especulação sobre edge vir a substituir a nuvem e, em alguns casos, isso pode acontecer. No entanto, em muitas situações, os dois têm uma relação simbiótica. Por exemplo, serviços como Web Host e Internet of Things beneficiam-se muito de edge computing quando se trata de desempenho e processamento inicial de dados. Esses serviços, no entanto, ainda exigem um back-end robusto na nuvem para coisas como armazenamento e análise de dados.
+
+Edge computing surge nos anos 90, quando a empresa Akamai lançou sua rede de entrega de conteúdo, que introduziu nodos em locais geograficamente mais próximos do utilizador final. Esses nodos armazenam conteúdo em cache, como imagens e vídeos. A computação edge leva esse conceito adiante, permitindo que os nodos executem tarefas computacionais mais básicas. Em 1997, o cientista da computação Brian Noble demonstrou como a tecnologia móvel poderia usar a computação edge para reconhecimento de fala. Dois anos depois, esse método também foi usado para prolongar a vida útil da bateria dos telemóveis.
+
+Como referi anteriormente, edge computing é muito usado no contexto Internet of Things. Por exemplo, os sensores instalados numa destas máquinas ligadas à Internet geram grandes quantidades de dados e se estes dados forem enviados por um longo caminho de rede para serem analisados e registados isso vai necessitar de muito mais tempo para obter uma resposta do que no caso em que os dados são processados na borda da nuvem, o mais próximo à fonte dos dados possível.
+
+(Slide)
+
+Casos concretos de uso de Edge Computing.
+
+Nos veículos Autónomos : A decisão de parar à frente de uma passadeira com pessoas deve ser tomada imediatamente. Confiar num servidor remoto para lidar com essa decisão não é razoável. Além disso, os veículos que utilizam tecnologia edge podem interagir com mais eficiência porque podem comunicar entre si primeiro, em vez de enviar dados sobre acidentes, condições climáticas, trânsito ou desvios para um servidor.
+
+Nos Dispositivos de saúde: Os monitores de saúde podem ficar de olho nas condições crônicas dos pacientes. Eles podem salvar vidas alertando instantaneamente os profissionais quando a ajuda é necessária. Além disso, os robôs que auxiliam na cirurgia devem poder analisar rapidamente os dados para ajudar com segurança, rapidez e precisão. Se estes dispositivos confiarem na transmissão de dados para a nuvem antes de tomar decisões, os resultados poderão ser fatais.
+
+Na segurança: Como é necessário responder a ameaças em segundos, os sistemas de vigilância de segurança também podem-se beneficiar da tecnologia edge. Os sistemas de segurança podem identificar ameaças e alertar os usuários sobre atividades incomuns em tempo real.
+
+Os reconhecedores de vozes inteligentes como também falei anteriormente: podem ter a capacidade de interpretar instruções de voz localmente para executar comandos básicos. Ligar ou desligar as luzes ou ajustar as configurações do termostato por exemplo, seriam possíveis mesmo sem conexão à Internet.
+
+No entanto, este tipo de tecnologia tem um grande incoveniente. As plataformas que a usam tendem a ser dispositivos restritos, sendo os principais fatores limitadores a capacidade da bateria e a memória do dispositivo, e não a capacidade de computação em si. Isso pode causar falta de recursos se vários aplicativos de IoT precisarem de ser implantados simultaneamente.
+
+(Slide)
+
+Fog sobrepõe-se ao Edge no aspecto de ter maior capacidade de processamento de dados, precisamente por ser uma espécie de mini-cloud. No entanto, o Edge ganha com a rapidez de processamento de grande quantidade de dados. 
+
+É uma maneira errada de pensar o individualismo de cada networking pois as vantagens são muito maiores se elas se complementarem entre si em vez de trabalharem sozinhas.

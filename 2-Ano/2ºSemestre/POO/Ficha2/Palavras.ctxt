@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Palavras
+comment0.text=\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ ex5\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=palavras\ key\ size
+comment1.target=boolean\ elem(java.lang.String[],\ java.lang.String,\ int)
+comment2.params=palavras
+comment2.target=java.lang.String[]\ noRep(java.lang.String[])
+comment3.params=palavras
+comment3.target=java.lang.String\ maiorString(java.lang.String[])
+comment4.params=palavras
+comment4.target=java.lang.String[]\ repetidos(java.lang.String[])
+comment5.params=palavras\ str
+comment5.target=int\ countStr(java.lang.String[],\ java.lang.String)
+numComments=6

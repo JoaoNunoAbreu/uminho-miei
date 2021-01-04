@@ -1,0 +1,49 @@
+- hosts: all
+  become: true
+  tasks:
+      - name: (3.a) Update repositories cache
+        apt:
+            update_cache: yes
+
+      - name: (3.b) Install a list of packages
+        apt:
+            name: "{{ packages }}"
+        vars:
+            packages:
+                - vim-nox
+                - openntpd
+                - sudo
+      - name: (3.c) Create user
+        user:
+                name: tester
+                password: "$6$mysecretsalt$ZB9R8AirQYAXhtfhOo2qdJz52FyNI6v3L6Uc3KNRP.arBKIYpcuEyQewT5qBAHoyQFwHkW6Z551Ql.cZ53GeY0"
+                groups: sudo
+
+      - name: (3.e) Set SSH authorized_key
+        authorized_key:
+            user: tester
+            state: present
+            key: "{{ lookup('file', '/home/vagrant/.ssh/id_rsa.pub') }}"
+
+      - name: (3.f) Disable root and password authentication for OpenSSH
+        copy:
+                src: /etc/ssh/sshd_config
+                dest: /etc/ssh/sshd_config
+                owner: root
+                group: root
+                mode: '0644'
+        notify:
+                - Restart ssh
+      - name: Start ssh
+        service:
+                name: "{{ item }}"
+                state: started
+        loop:
+                - sshd
+                - openntpd
+
+  handlers:
+        - name: Restart ssh
+          service:
+                name: sshd
+                state: restarted

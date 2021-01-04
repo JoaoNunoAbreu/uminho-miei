@@ -1,0 +1,5 @@
+/agenda//entrada[contains(@id,'1')]
+/agenda//entrada[starts-with(@id,'1')]
+/agenda//entrada[starts-with(@id,'1')]
+
+//doc[contains(prov,'Alentejo')]/tit 		=		//doc[prov = 'Alentejo']/tit
