@@ -1,6 +1,37 @@
 # Infraestrutura de Centro de Dados
 
+## Número de páginas dos slides
+
+- infraestrutura - 9
+- data storage - 44
+- filesystems - 20
+- dns - 14
+- ntp - 7
+- dhcp - 12
+- reliability - 64
+- data centers - 50
+
 ## Aulas teóricas 📕
+
+### Data storage
+
+- https://www.youtube.com/watch?v=YqsVxCEpA0w - DAS vs NAS vs SAN
+- https://www.youtube.com/watch?v=3yZDDr0JKVc - NAS vs SAN
+- https://www.youtube.com/watch?v=U-OCdTeZLac - RAID 0, 1, 5 e 10
+
+### DNS
+
+- https://www.youtube.com/watch?v=mpQZVYPuDGU
+
+### NTP
+
+- https://www.youtube.com/watch?v=1GtySPUW-XA
+
+### DHCP
+
+- https://www.youtube.com/watch?v=e6-TaH5bkjo
+
+### Data center basics
 
 - **Resiliência** - permite que a aplicação continue com funcionalidade total ou parcial depois de uma ou mais falhas.
 - **Reabilidade** - representa a probabilidade dum sistema não encontrar nenhuma falha ao longo de um tempo. 

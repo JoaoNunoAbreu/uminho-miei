@@ -1,0 +1,95 @@
+2020
+
+1.
+  Na arquitetura multi-camada cada servidor atua como cliente na próxima camada. 
+  Apesar disso, os estados variam de camada para camada e quanto mais persistente for o estado mais
+  difícil será torná-lo tolerante às falhas, como por exemplo replicação ou sharding de bases de dados. 
+  Na camada servidor web poderiamos criar um grupo de servidores que não precisavam de sincronização entre si e o
+  cliente teria sempre com quem comunicar mesmo que alguns servidores estejam em baixo.
+  Na camada da aplicação também poderiamos criar um grupo de servidores mas que precisavam de sincronização entre si e o
+  web server teria sempre com quem comunicar mesmo que alguns servidores estejam em baixo.
+  Na camada da base de dados apenas precisamos de replicação ou de sharding, mas será uma operação custosa devido ao estado
+  persistente que apresenta.
+  
+2.
+  As máquinas virtuais permitem criar um dispositvo que abstrai os recursos
+  existentes de hardware ou software, apresentando algumas vantagens. Relativamente ao isolamento, os recursos virtuais
+  são isolados do hardware/software subjacente em termos de segurança (que pode ser comprometida se um user malicioso
+  aceder aos recursos físicos) e tolerância a falhas.
+  Quanto à otimização de recursos podemos correr qualquer tipo de processo concorrentemente na máquina host, com diferentes
+  sistemas operativos.
+  
+3.
+  A gestão de configurações é uma maneira de lidar com as mudanças sistemáticas do sistema, mantendo a integridade ao
+  longo do seu ciclo de vida. 
+  Para mantermos o sistema distribuível utilizaríamos um sistema de inventário que agrupava todos os alvos de deployment 
+  onde correriam paralelamente os serviços.
+  Para ser historicamente rastreável poderiamos criar um sistema de controlo de versões que guardaria todas as mudanças
+  entre versões.
+  Para ser seguro poderiamos guardar os dados valiosos num vault que encriptaria todo o conteúdo.
+  
+4.
+  O ambiente de teste é onde podemos simular os testes de carga no sistema, sendo este o mais próximo da realidade e pronto
+  para o release da aplicação.
+  Workloads são quanto carga vai ter cada teste e quão próxima da realidade é. Podemos ter workloads que usam informação real
+  só que fica difícil de escalar e de obter. A outra alternativa seria gerar sinteticamente estes dados e ganharíamos a
+  escabilidade mas perderíamos na comparação com a realidade.
+  Métricas são usadas para avaliar a performance do teste, sendo estas as mais comuns o Response Time e Throughput (taxa
+  de atendimento).
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+2019
+
+1.
+  A arquitetura master-server, tal como o nome indica, possui um servidor que é gere o fluxo de comunicação. O cliente pede
+  ao master-server para falar com um servidor e este responde-lhe com a indicação do server com que vai falar e também atua
+  como proxy. No entanto, caso master-server esteja em baixo, toda a arquitetura deixa de ficar funcional (SPOF),
+  não apresentando resilência mas sim escalabilidade. Quanto ao server-group, não só temos escalabilidade como também 
+  resilência pois este tem vários servidores que estão sincronizados entre si, podendo o cliente comunicar com qualquer
+  um deles, e caso algum falhe, estarão outros prontos para compensar. No entanto, este último tem uma escalibilidade mais
+  difícil pois a sincronização entre os servidores é custosa, e quanto maior for, mais custoso fica cada replicação. 
+
+2.1.
+  Usando VMs ou containers poderemos reduzir muitos os custos das infraestruturas porque podemos correr múltiplos serviços
+  na mesma máquina. Também podemos aumentar a elasticidade porque são criadas à medida que o utilizador precisa de mais
+  recursos dinamicamente. 
+  
+2.2.
+  No que toca à transparência com os clientes, no IaaS, o cliente não tem total transparêncoa, uma vez que, é este que
+  decide como estruturar a sua aplicação. Quanto à arquitetura PaaS, o cliente tem total aplicação, não é este que vai
+  decidir como é feito o deployment da mesma. Neste caso o cliente apenas decide colocar a sua aplicação num serviço
+  PaaS e este fará então o deployment da aplicação, alocando os recursos que ache necessários. 
+
+3.
+  Para conseguirmos alcançar receitas ansible reutilizáveis devemos fazer uma junção entre a 
+  utilização de roles com templates e/ou condicionais.
+  As roles são receitas ansible configuráveis com o objetivo de representar um serviço ou uma
+  parte específica do mesmo. Estes roles permitem a utilização de variáveis, o que faz com que
+  seja tudo reutilizável. A isto acresce a possibilidade do uso de templates, que permitem escrever
+  o valor  dessas variáveis em ficheiros e o uso de condicionais que nos permitem correr apenas uma
+  task se um determinado predicado for verdade.
+
+4.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+2018
+
+1.
+
+2.
+  Igual a 2019-3.
+
+3.
+  Elasticidade em cloud computing é definida como a capacidade de um sistema ser capaz de se adaptar ao workload fazendo
+  gestão de recursos dinâmicos para que existem sempre os recursos necessários para responder de forma eficiente.  A elasticidade
+  de um sistema aumenta se o controlo dos recursos não estiver ao encargo do cliente, o que é o caso de uma arquitetura PaaS. Neste tipo
+  de arquitetura conseguimos aumentar a elasticidade (em relação às IaaS) porque o utilizador é apenas responsável pelo 
+  desenvolvimento da aplicação, passando a responsabilidade de gestão de recursos para o provedor.
+  
+4.
+  O workload pode ser criado partir de fontes reais (traces) ou de forma sintética (JMeter). No casos dos traces, a vantagem é que são
+  reais e desvantagem é que são difíceis de obter e difícilmente escaláveis. No caso da forma sintética, já é facilmente escalável,
+  pois geramos quantos testes quanto queremos mas perdemos na autenticidade dos valores no que toca à proximidade com a realidade. 
+
