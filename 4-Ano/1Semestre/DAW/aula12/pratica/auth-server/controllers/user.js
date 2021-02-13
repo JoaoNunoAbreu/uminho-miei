@@ -1,6 +1,6 @@
 // Controlador para o modelo User
 
-var User = require('./models/user')
+var User = require('../models/user')
 
 // Devolve a lista de Users
 module.exports.listar = () => {

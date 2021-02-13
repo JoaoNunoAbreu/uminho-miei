@@ -1,9 +1,9 @@
 var createError = require('http-errors');
 var express = require('express');
-var cookieParser = require('cookie-parser');
 var session = require('express-session');
 const FileStore = require('session-file-store')(session);
 var LocalStrategy = require('passport-local').Strategy
+var passport = require('passport')
 
 var mongoose = require('mongoose');
 
@@ -16,8 +16,8 @@ var User = require('./controllers/user')
 
 // Configuração da estratégia local
 passport.use(new LocalStrategy(
-  {usernameField: 'id'}, (username, password, done) => {
-    axios.get('http://localhost:7709/users/' + username)
+  {usernameField: 'username'}, (username, password, done) => {
+    User.consultar(username)
       .then(dados => {
         const user = dados.data
         if(!user) { return done(null, false, {message: 'Utilizador inexistente!\n'})}
@@ -30,19 +30,18 @@ passport.use(new LocalStrategy(
 
 // Indica-se ao passport como serializar o utilizador
 passport.serializeUser((user,done) => {
-  console.log('Serielização, id: ' + user.id)
+  console.log('Serielização, uname: ' + user.username)
   done(null, user.id)
 })
   
 // Desserialização: a partir do id obtem-se a informação do utilizador
-passport.deserializeUser((uid, done) => {
-  console.log('Desserielização, id: ' + uid)
-  axios.get('http://localhost:7709/users/' + uid)
+passport.deserializeUser((uname, done) => {
+  console.log('Desserielização, uname: ' + uname)
+  User.consultar(uname)
     .then(dados => done(null, dados.data))
     .catch(erro => done(erro, false))
 })
   
-var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/user');
 
 var app = express();
@@ -58,25 +57,13 @@ app.use(session({
 }))
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
 
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser('O meu segredo'));
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(function(req, res, next){
-  console.log('Signed Cookies: ', JSON.stringify(req.signedCookies))
-  console.log('Session: ', JSON.stringify(req.session))
-  next()
-})
-
-app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
