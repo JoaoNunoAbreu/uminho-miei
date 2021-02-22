@@ -1,0 +1,3 @@
+/Users/joaonunoabreu/Desktop/2ºSemestre/CG/Aula11/build/CMakeFiles/class11.dir
+/Users/joaonunoabreu/Desktop/2ºSemestre/CG/Aula11/build/CMakeFiles/ALL_BUILD.dir
+/Users/joaonunoabreu/Desktop/2ºSemestre/CG/Aula11/build/CMakeFiles/ZERO_CHECK.dir
