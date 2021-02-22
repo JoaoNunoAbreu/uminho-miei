@@ -1,0 +1,19 @@
+A) Problema de estado único
+
+B)
+
+- Conjunto de estados: conjunto de pares ordenados(X,Y)
+- X->{0,8} e Y ->{0,5}
+- Estado inicial: (0,0)
+- Estados finais: (4,_) e (_,4)
+- Operadores: encher(), esvaziar(),transferir()
+- Teste objetivo: um dos jarros deve conter somente 4 litros de água
+- Custo: 1
+- Transições: 
+
+    | nº transicao | estado i | condicao | estado f |
+    |--------------+----------+----------+----------|
+    |      1       |  (0,0)   |  if(x<8) |  (8,y)   |
+    |      2       |  (0,0)   |  if(y<5) |  (x,6)   |
+    |      3       |  (8,0)   |  if(x>0) |  (0,0)   |
+    |      4       |  (8,0)   |  if(y<5) |  (8,5)   |
