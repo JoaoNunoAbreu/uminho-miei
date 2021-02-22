@@ -1,0 +1,106 @@
+processadores
+    gerados por: flex + yacc    (bison)
+
+gramática
+    como fazer gerador?
+
+    gerador(gram) -> programa
+
+Geradores:
+    Top-Down    --  rec(axiomo -> folhas)
+        Recursivo Descendente
+        LL1 ... LLn (dirigido por tabela)
+
+    Bottom-Up   --  terminais -> agrupando -> axioma
+        LR0
+        LaLR1
+
+    Left-Corner --  
+    ...
+
+1. Recursivo descendente
+
+1.a Gramática JSON
+    ["abc",
+        ["def",
+            {
+                "a": "b",
+                "c": [],
+                "d": 35
+            }
+        ]
+    ]
+
+    T={[]{},: INT STR}
+
+    j           -> lista
+                | dic
+                | INT
+                | STR
+
+    lista       -> [elems]
+
+    dic         -> {pares}
+
+    elems       -> j elems
+                |
+
+    pares       -> par pares
+                |
+
+    par         -> INT : j
+                |  STR : j
+
+
+fun recterm(t){
+    if SEG=t:
+        SEG=yylex()     // avançar...
+}
+
+fun rec_elems{
+    if SEG pertence {'[','{',INT,STR}:      // lookahead
+        rec_j
+        rec_elems
+    elsif SEG pertence {']'}:
+        
+    else:
+        FATAL-ERROR
+    
+}
+
+fun rec_lista {
+        
+    if SEG='[':
+        rec_term([ )
+        rec_elems
+        rec_term(] )
+    else:
+        FATAL-ERROR
+
+}
+
+fun rec_par {
+    if    SEG=INT:
+        recterm(INT)
+        rec_:
+        rec_j
+    elsif SEG=STR:
+        recterm(STR)
+        rec_:
+        rec_j
+    else:
+        FATAL-ERROR
+}
+
+fun rec_j {
+    if    SEG=INT:
+        recterm(INT)
+    elsif SEG=STR:
+        recterm(STR)
+    elsif SEG='[':
+        rec_lista
+    elsif SEG='{':
+        rec_dic
+    else:
+        FATAL-ERROR
+}

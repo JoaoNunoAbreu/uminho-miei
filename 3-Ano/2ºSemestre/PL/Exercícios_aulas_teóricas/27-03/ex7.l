@@ -1,0 +1,31 @@
+%option noyywrap
+%x    ccSTR ccCOM
+%%
+   char BUF[2000];
+
+[a-zA-Z0-9]+    {yylval.n=strdup(yytext);  return ID;} 
+
+
+\"              {BEGIN ccSTR; strcpy(BUF,"");}
+[=(),]          {return yytext[0];}
+
+<ccSTR>{
+  \"            {yylval.n=strdup(BUF); BEGIN 0; return STR;}  
+  \\\"          {strcat(BUF,"\"");}        // para ter aspas protegidas dentro da string
+  \\n           {strcat(BUF,"\n");}
+  .             {strcat(BUF,yytext);}
+}
+
+\/\*            {BEGIN ccCOM;}
+<ccCOM>{
+    \*\/        {BEGIN 0;}
+    .|\n        {}
+}
+
+
+" "|\n          {}
+#.*             {}
+
+.               {fprintf(stderr,"Inválido '%c'\n",yytext[0]);}
+
+%%

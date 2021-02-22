@@ -1,0 +1,5 @@
+letra           [A-Za-z]                            (\w)
+palavra         [A-Za-z]+                           (\w+)
+palavra acento  [A-Za-záãçéó]+
+palavra hifen   [A-Za-z][A-Za-záãçéó-]*[A-Za-z]
+chars not ASCII [^ -~]                              (fazer replace com {$1})

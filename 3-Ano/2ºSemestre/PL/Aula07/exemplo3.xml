@@ -1,0 +1,185 @@
+<!--?xml version="1.0"?-->
+<rdf:RDF 
+         xmlns="http://j/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://j/"
+>
+
+<!--         xml:base="j" xmlns="j#"-->
+
+<owl:Ontology rdf:about="j"/>
+
+<owl:ObjectProperty rdf:about="iof"/>
+
+<owl:ObjectProperty rdf:about="is_a"/>
+
+<owl:ObjectProperty rdf:about="pof"/>
+
+<owl:ObjectProperty rdf:about="pai_de">
+  <owl:inverseOf rdf:resource="filho_de"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="filho_de">
+  <owl:inverseOf rdf:resource="pai_de"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="conjuge">
+  <owl:inverseOf rdf:resource="conjuge"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="presente_em">
+  <owl:inverseOf rdf:resource="inclui"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="inclui">
+  <owl:inverseOf rdf:resource="presente_em"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="nome">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="n">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="m">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="tit">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ref">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="description">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="pessoa">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="história">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="foto">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="album">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<pessoa rdf:about="José_João">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <pai_de rdf:resource="João_Afonso"/>
+  <filho_de rdf:resource="Duarte_PDA"/>
+  <filho_de rdf:resource="Isabel"/>
+  <conjuge rdf:resource="Luísa_Alvim"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">José João</nome>
+  <n rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1959</n>
+</pessoa>
+
+<pessoa rdf:about="Luísa_Alvim">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <presente_em rdf:resource="f1"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maria Luísa Alvim</nome>
+  <n rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1963</n>
+</pessoa>
+
+<pessoa rdf:about="Duarte_PDA">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <filho_de rdf:resource="Duarte_MDA"/>
+  <filho_de rdf:resource="Conceição_PDA"/>
+  <conjuge rdf:resource="Isabel"/>
+  <presente_em rdf:resource="f2"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duarte Pereira Dias de Almeida</nome>
+  <n rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1922</n>
+</pessoa>
+
+<pessoa rdf:about="Isabel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isabel A.G.V.P. Dias de Almeida</nome>
+  <n rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1929</n>
+</pessoa>
+
+<pessoa rdf:about="Duarte_MDA">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <filho_de rdf:resource="José_DAjr"/>
+  <filho_de rdf:resource="Amélia_SSM"/>
+  <conjuge rdf:resource="Conceição_PDA"/>
+  <presente_em rdf:resource="f2"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duarte Moreira Dias de Almeida</nome>
+</pessoa>
+
+<pessoa rdf:about="Conceição_PDA">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maria da Conceição Pereira</nome>
+</pessoa>
+
+<pessoa rdf:about="José_DAjr">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <filho_de rdf:resource="José_DA"/>
+  <conjuge rdf:resource="Amélia_SSM"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">José Dias de Almeida jr</nome>
+</pessoa>
+
+<pessoa rdf:about="Amélia_SSM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <filho_de rdf:resource="Joaquim_SSM"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amélia Soares Moreira</nome>
+</pessoa>
+
+<pessoa rdf:about="Alexandrina_SM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <pai_de rdf:resource="Amélia_SSM"/>
+  <filho_de rdf:resource="Moreira_da_Maia"/>
+  <conjuge rdf:resource="Joaquim_SSM"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexandrina da Silva Moreira</nome>
+</pessoa>
+
+<pessoa rdf:about="José_DA">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">José Dias de Almeida</nome>
+</pessoa>
+
+<pessoa rdf:about="João_Afonso">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">João Afonso Alvim D.A.</nome>
+  <n rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</n>
+</pessoa>
+
+<pessoa rdf:about="Moreira_da_Maia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">António da Silva Moreira</nome>
+</pessoa>
+
+<pessoa rdf:about="Joaquim_SSM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquim Soares da Silva Moreira</nome>
+</pessoa>
+
+<foto rdf:about="f1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AlbumMA/1.jpg</ref>
+</foto>
+
+<foto rdf:about="f2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AlbumDA/2.jpg</ref>
+</foto>
+
+<foto rdf:about="f3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</foto>
+
+
+</rdf:RDF>

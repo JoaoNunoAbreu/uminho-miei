@@ -1,0 +1,41 @@
+pushi 0 // aqui é a variável i (posição 0)
+
+start
+
+// i = 1
+pushi 1
+storeg 0
+
+// Se 1 elefante chateia muita gente, 2 elefantes chateiam muito mais
+
+// while (i < 10) 
+iniciowhile:
+    pushg 0
+    pushi 10
+    inf
+    jz fimwhile
+
+// esc (se)
+    pushs "se "
+    writes 
+// esc (i)
+    pushg 0
+    writei 
+// esc (elefante chateia ...)
+    pushs " elefante chateia muita gente ... "
+    writes
+// i++
+    pushg 0
+    pushi 1
+    add
+    storeg 0
+// esc (i)
+    pushg 0
+    writei
+// esc (incomoda muito mais)
+    pushs " incomoda muito mais\n"
+    writes
+jump iniciowhile
+fimwhile:
+
+stop

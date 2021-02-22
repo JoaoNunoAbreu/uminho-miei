@@ -1,0 +1,5 @@
+"batatas"
+A="batatas"
+A+A
+A*2
+3*len(A)

@@ -1,0 +1,9 @@
+dir1(
+    file1,
+    file2,
+    dir2(
+        file3,
+        file4
+    ),
+    dir3()
+)

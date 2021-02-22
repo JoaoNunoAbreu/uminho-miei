@@ -1,0 +1,7 @@
+R=João
+E=Manuel
+
+R:Eu gostava de saber se tu gostas de cinema.
+E:Sim, eu gosto e tu?
+R:Também. Eu também gosto de tudo de música, meu caro, e tu?
+E:Eu não gosto.

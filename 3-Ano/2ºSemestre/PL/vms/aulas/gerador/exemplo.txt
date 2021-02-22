@@ -1,0 +1,25 @@
+int a;
+int b;
+a = ler;
+b = 5 + a;
+escrever b;
+
+# pushi 0   // a posicao 0
+# pushi 0   // b posicao 1
+# start 
+
+# read      // string no topo da stack
+# atoi      // int no topo da stack
+# storeg 0  // posicao 0 tem o a
+
+# // b = 5 + a;
+# pushi 5
+# pushg 0   // a posicao 0
+# add
+# storeg 1
+
+# // escrever b
+# pushg 1
+# writei
+
+# stop

@@ -1,0 +1,25 @@
+%{
+int yyerror(char* s);
+#include <math.h>
+%}
+
+%option noyywrap yylineno
+%%
+
+int               { return TINT;}
+string            { return TSTR;}
+ler               { return LER;}
+escrever          { return ESCREVER;}
+
+[a-zA-Z]          { yylval.c = yytext[0]; return VAR;}
+[0-9]+            { yylval.n = atoi(yytext); return NUM;}
+\"[^"]*\"         { yylval.s = strdup(yytext); return STR;}
+
+[;()+\-*\/^=]     { return yytext[0];}
+
+[\n\t ]           ;
+#.*               ;
+
+.                 { yyerror("Caracter Invalido");}
+
+%%

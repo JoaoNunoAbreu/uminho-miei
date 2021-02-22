@@ -1,0 +1,16 @@
+sin(pi/2)
+exp(log(33))
+. * .
+. / 33
+3 - 3 - 3
+a=b=7
+a+b
+3+3*9
+-5
+-(3+3)
+-(3+3) * 2
+-(3+3) * -3
+-2 ^ 2
+(-2) ^ 2
+-5 + 5
+# Cada linha tem de ter um enter no fim

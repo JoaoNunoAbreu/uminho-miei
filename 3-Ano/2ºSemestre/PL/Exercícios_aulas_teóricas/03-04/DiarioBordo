@@ -1,0 +1,74 @@
+RD com semântica -- somar os INT que aparecem num JSON
+
+
+    j           -> lista        {$1}
+                | dic           {$1}
+                | INT           {$1}
+                | STR           {0}
+
+    lista       -> [elems]      {$2}
+
+    dic         -> {pares}      {$2}
+
+    elems       -> j elems      {$1+$2}
+                |               {0}
+
+    pares       -> par pares    {$1+$2}
+                |               {0}
+
+    par         -> INT : j      {$1+$3}
+                |  STR : j      {$3}
+
+
+fun recterm(t){
+    if SEG=t:
+        SEG=yylex()     // avançar...
+}
+
+fun rec_elems{
+    if SEG pertence {'[','{',INT,STR}:      // lookahead
+        rec_j
+        rec_elems
+    elsif SEG pertence {']'}:
+        
+    else:
+        FATAL-ERROR
+    
+}
+
+fun rec_lista {
+        
+    if SEG='[':
+        rec_term([ )
+        rec_elems
+        rec_term(] )
+    else:
+        FATAL-ERROR
+
+}
+
+fun rec_par {
+    if    SEG=INT:
+        recterm(INT)
+        rec_:
+        rec_j
+    elsif SEG=STR:
+        recterm(STR)
+        rec_:
+        rec_j
+    else:
+        FATAL-ERROR
+}
+
+fun rec_j {
+    if    SEG=INT:
+        recterm(INT )
+    elsif SEG=STR:
+        recterm(STR )
+    elsif SEG='[':
+        rec_lista
+    elsif SEG='{':
+        rec_dic
+    else:
+        FATAL-ERROR
+}

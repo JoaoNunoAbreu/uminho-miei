@@ -1,0 +1,13 @@
+dir1(
+# coment 1
+    file1="Viva\n o porto",
+    file2="Viva\n o benfica",
+    dir2(
+        file3="a",
+        file4="b"
+    ),
+/* um comentário 
+multi
+linha em C */
+    dir3()
+)

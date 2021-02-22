@@ -1,0 +1,13 @@
+while (c)
+    a
+
+-----------------------
+     é o mesmo que
+-----------------------
+
+initwhile:
+  C
+  jz fimwhile
+  A
+  jump initwhile
+fimwhile:

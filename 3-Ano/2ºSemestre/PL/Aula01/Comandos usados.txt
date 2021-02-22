@@ -1,0 +1,13 @@
+Comandos usados:
+
+grep -E "(f|F)ev.....o" sms.txt
+grep -E "(f|F)ev.+o" sms.txt
+grep -E "[fdDF]e.+o" sms.txt
+
+O grep procura por linha (até "\n"), e procura a maior extensão de caracteres que satisfaz a condição ".+o"
+
+<.+> apanha qualquer tag HTML com pelo menos 1 char
+<.*> apanha qualquer tag HTML
+".*" apanha qualquer string
+
+A ordem é relevante no flex!
