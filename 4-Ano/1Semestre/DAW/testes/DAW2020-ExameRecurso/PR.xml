@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <key>Teste Recurso</key>
+        <title>Teste Recurso</title>
+        <bdate>03/02/2021</bdate>
+        <edate>03/02/2021</edate>
+        <supervisor url="http://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="a84442">
+            <name>João Nuno Cardoso Gonçalves de Abreu</name>
+            <email>a84802@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>        
+        <p>As respostas estão no notas.txt do exercício 1 </p>S
+       
+    </abstract>
+    <deliverables>
+        <link url="/ex1">Exercício 1</link>
+        <link url="/ex1/notas.txt">Respostas</link>
+        <link url="/ex2">Exercício 2</link>
+    </deliverables>
+</pr>

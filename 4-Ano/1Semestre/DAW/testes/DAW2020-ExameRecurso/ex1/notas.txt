@@ -1,0 +1,25 @@
+
+2.
+    mongoimport -d listaCompras -c compras --jsonArray compras.json
+
+3.
+    - 
+        Querie: db.compras.count()
+        Resultado: 3
+    - 
+        Querie: db.compras.find({"produtos.designacao": "Nabos"}).count()
+        Resultado: 3
+    - 
+        Querie: db.compras.distinct("produtos.categoria").sort()
+        Resultado: [
+            "Carne",
+            "Condimentos",
+            "Frutas e Legumes",
+            "Limpeza",
+            "Outros",
+            "Padaria",
+            "Peixe"
+        ]
+    -
+        Querie:
+        Resultado:

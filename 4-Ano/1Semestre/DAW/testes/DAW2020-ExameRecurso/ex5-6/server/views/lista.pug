@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .w3-top
+    .w3-bar.w3-blue-gray
+      h1="ID: " + dados._id
+  br
+  br
+  br
+  .w3-container.w3-margin
+    .w3-container.w3-margin
+        h3 Informação
+        h6 
+          strong Designacao: 
+          | #{dados.designacao}
+        h6 
+          strong Data: 
+          | #{dados.data}
+
+      
+        h3 Produtos
+        each f in dados.produtos
+          li #{f.designacao}
+          li #{f.categoria}
+          ul
+            li #{f.quantidade.valor}
+            li #{f.quantidade.unidade}
+
+        
+    button.w3-button.w3-blue-gray(type='button', id='home', onclick='window.location.href="/";') Home

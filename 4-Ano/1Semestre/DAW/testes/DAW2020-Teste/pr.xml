@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pr>
+    <meta>
+        <key>DAW 2020</key>
+        <title>Teste de Desenvolvimento e Aplicações WEB</title>
+        <bdate>20-01-2021</bdate>
+        <edate>20-01-2021</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/"> José Carlos Ramalho</supervisor>
+    </meta>
+    <workteam>
+        <worker num="A84802">
+            <name>João Nuno Cardoso Gonçalves de Abreu</name>
+            <email>a84802@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+           As perguntas foram respondidas num ficheiro que pode ser encontrado dentro da pasta ex1 chamado "respostas.txt".
+        </p>
+
+        <p> 
+            No segundo exercício, foi proposto a implementação de uma aplicação em <i>nodejs</i> que permita navegar sobre a API de dados, CLAV que visa a classificação e a avaliação de toda a documentação circulante na administração pública portuguesa.
+            Numa primeira fase foi testado a API de dados com o <i>Postman</i> de forma a perceber melhor a face a qual foi desenvolvido para tal foi respondido algumas questões:
+        </p>
+            <p>
+                <b>1) </b>
+                <u>R: 21</u>
+            </p>
+            <p>
+                <b>2) </b>
+                <u>R: 637</u>
+            </p>
+            <p>
+                <b>3) </b>
+                <u>R: 8</u>
+            </p>
+            <p>
+                <b>4) </b>
+                <u>R: 6</u>
+            </p>
+        <p>
+            Foi tudo implementado como pedido. Na página inicial, apresenta-se uma tabela com as classes de nível 1, com links respetivos para cada classe.
+            Dentro da página de cada classe encontra-se a sua informação, e uma tabela respetiva com os seus descendentes. Caso for de nível 3, apresenta-se outra tabela
+            com as classes relacionadas e o tipo de relação associado.
+            De notar, o token foi usado estaticamente, isto é, fiz um post à API fornecida e usei o token dado pela API, isto é, não tentei a valorização.
+        </p>
+    </abstract>
+    <deliverables>
+            <link url="../ex1/dataSetRespostas/batismos.json">Dataset disponibilizado  - exercício 1</link>
+            <link url="../ex1/dataSetRespostas/batismos_fixed.json">Dataset corrigido  - exercício 1.1</link>
+            <link url="../ex1/dataSetRespostas/script.js">Script para alterar o dataset</link>
+            <link url="../ex1/controllers/batismos.js">Funções para retirar informação da base de dados - exercício 1</link>
+            <link url="../ex1/models/batismos.js">Modelo de um objecto do dataset - exercício 1</link>
+            <link url="../ex1/routes/api.js">Rotas implementadas - exercício 1</link>
+            <link url="../ex1/respostas.txt">Respostas das perguntas</link>
+            <link url="../ex2/routes/index.js">Rotas implementadas - exercício 2</link>
+            <link url="pr.xml">pr.xml</link>
+    </deliverables>
+</pr>

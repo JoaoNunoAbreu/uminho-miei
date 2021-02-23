@@ -1,0 +1,17 @@
+1.
+    Ctrl + f em modo Match Whole Word e Substituir todos 
+    date  -> "date"
+    title -> "title"
+    ref   -> "ref"
+    href  -> "href"
+
+    Depois, para a falta de aspas em certos campos, como eram poucos casos, não achei necessário
+    criar um programa capaz de limpar os dados automaticamente e usei a ferramenta externa JSON
+    validor online e o site informava-me onde tinha erros no ficheiro JSON.
+
+    Para adicionar os campos mae, pai e alteração do _id foi usado um script (script.js).
+    Para facilitar os exercícios seguintes, optei por colocar um campo extra no json que apenas
+    contém o ano.
+
+3.
+    mongoimport -d DAW-Teste -c batismos --jsonArray batismos_fixed.json
