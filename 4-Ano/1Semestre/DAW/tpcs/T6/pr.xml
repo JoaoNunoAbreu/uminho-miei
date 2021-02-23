@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/Users/joaonunoabreu/Desktop/1Semestre/DAW/tpcs/T4/pr.dtd">
+<pr>
+    <meta>
+        <key>DAW_T6</key>
+        <title>Criação de um Server em Node.js para servir conteúdo numa SPA a partir de uma REST API</title>
+        <bdate>18 de Novembro de 2020</bdate>
+        <edate>24 de Novembro de 2020</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="a84802">
+            <name>João Nuno Abreu</name>
+            <email>a84802@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p>Este trabalho foi realizado para unidade curricular <i><b>Desenvolvimento de aplicações Web</b></i>.</p>
+        <p>Neste trabalho foi desenvolvido um servidor em <b>NodeJs</b> que serve páginas dinâmicas, sempre que o servidor precisa de informação faz pedidos a um <i>json server</i> sobre um <i>dataset</i> de tarefas.</p>
+        <p>Este servidor é um gestor de tarefas, capaz de aceitar pedidos de criação de novas tarefas, edição e remoção das mesmas.</p>
+    </abstract>
+    <deliverables>
+        <link url="server.js">Servidor NodeJs</link>
+        <link url="db.json">Dataset</link>
+    </deliverables>
+</pr>
