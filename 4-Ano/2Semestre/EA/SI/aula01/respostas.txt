@@ -1,0 +1,20 @@
+João Abreu - A84802
+
+3.1
+
+1.
+	a. MPBB MPBB MPBB MP  => 9.80
+	b. MPBB HM KK H MP => 7.36
+
+2.
+	Original:
+
+	a. MPBB PBB MPBB PBB MPBB PBB MPBB PBB MPBB PBB MPBB PBB MPBB PBB MPBB PBB MPBB PBB  MPBB H T(15)
+
+	Alternativa:
+
+	a. MPBB H M KKKKKKKKK H MPBB H M KKKKKKKKKKKKKKK => 15.32
+
+	b. adicionar/remover campos de números/caracteres como estes original demasiada complexidade e dificuldade que 
+	facilmente se resolveria usando campos de strings.
+ 

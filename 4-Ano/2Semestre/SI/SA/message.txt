@@ -1,0 +1,39 @@
+1
+
+Boa tarde a todos, daremos agora início à nossa apresentação da fase final do projeto Robocode, sendo o foco desta fase possuirmos finalmente 
+uma equipa formada com o objetivo de combater e ganhar batalhas. Apresentaremos cada membro da nossa equipa e de seguida o seu comportamento
+e utilidade que possuem. 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+2 
+
+Começando por uma visão mais geral da nossa equipa, esta é constituída por 3 robots diferentes. Temos o boss que lidera os 3 droids, 
+depois os droids (ou gladiator) que recebem as ordens do boss e por fim o saviour que consiste num robot de suporte ao boss, 
+uma vez que este é a peça mais essencial da equipa. 
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+3/4
+
+Começando pelo primeiro elemento da nossa equipa, o boss, este tem como principal função comandar os droids como já foi referido anteriormente.
+Passando ao seu comportamento em si na nossa implementação, este começa por informar os seus teammates da sua posição, seguido de um pedido de
+suporte ao saviour para este se movimentar para ao lado dele. A partir daí, começa a girar o seu radar em busca dos inimigos. 
+    
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+5
+
+Depois de efetuar estes 3 passos, o boss começará a desempenhar o seu papel. No entanto este tomará 2 tipos de comportamentos diferentes dependendo
+do estado do jogo. O seu comportamento standard está presente na coluna da esquerda, em que este fica parado, não atacando ninguém para poupar ao
+máximo a sua energia, e com o seu radar a girar continuamente. Quando encontra todos os inimigos, este guarda as suas posições e calcula o melhor
+target para os droids focarem. Optamos por escolher o robot que esteja mais próximo dos droids para eliminar-mos um inimigo o mais cedo possível.
+Depois ordena os droids a atacarem este robot e quando este é eliminado recalculamos um novo target. Ao permanecer no mesmo sítio,
+o boss torna-se bastante vulnerável, e foi por isso que implementamos aquele último ponto. Basicamente, quando o boss é atingido, este desvia-se
+ligeiramente no sentido perpendicular ao sentido da bala para evitar levar com o próximo tiro. É nesta situação que ele também volta a chamar o
+saviour para o seu lado.
+Depois também temos o outro tipo de comportamento que o boss pode assumir, que se encontra na coluna da esquerda. O boss passará a agir desta maneira
+quando os seus droids morrerem, pois não fará mais sentido o boss ficar à procura de inimigos e calcular os respetivos targets. Sendo assim, neste
+estado, ele próprio passará a ter o papel de atacar. Apesar disso, continuará a ficar no mesmo sítio mas possuindo o mesmo comportamento de desvio
+caso seja atingido.

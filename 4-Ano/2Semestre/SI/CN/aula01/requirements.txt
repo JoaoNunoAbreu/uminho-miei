@@ -1,0 +1,1 @@
+pip install tensorflow tensorflow-gpu keras numpy pandas matplotlib sklearn jupyter
