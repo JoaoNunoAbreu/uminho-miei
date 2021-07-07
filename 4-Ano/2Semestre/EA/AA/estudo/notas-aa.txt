@@ -1,2 +1,0 @@
-pim - diagrama de classes à la P.O.O
-psm - diagrama de classes com mais classes derivadas da tecnologia (ex: Java enterprise, Spring)
